@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Ambro.App_Start;
 
 namespace Ambro
 {
@@ -13,6 +14,8 @@ namespace Ambro
     {
         protected void Application_Start()
         {
+            AmbroConfig.InitConfig();
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
