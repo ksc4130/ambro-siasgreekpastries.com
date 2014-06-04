@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\img\packages\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AmbroConfig.cs" />
@@ -160,7 +161,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PackagesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,18 +171,21 @@
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Globals.cs" />
+    <Compile Include="Models\Package.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ProductType.cs" />
+    <Compile Include="Models\PackageType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\admin-config.js" />
     <Content Include="app\app-config.js" />
     <Content Include="app\app.js" />
     <Content Include="app\controllers\homeCtrl.js" />
     <Content Include="app\controllers\manageProductsCtrl.js" />
     <Content Include="app\controllers\productsCtrl.js" />
     <Content Include="app\services\apiSrv.js" />
-    <Content Include="app\services\productsSrv.js" />
+    <Content Include="app\services\packageSrv.js" />
+    <Content Include="app\services\productSrv.js" />
     <Content Include="app\tmpls\contact.html" />
     <Content Include="app\tmpls\home.html" />
     <Content Include="app\tmpls\manageProducts.html" />
@@ -198,6 +204,9 @@
     <Content Include="Content\bootstrap\bootstrap.min.css">
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap\print.css">
+      <DependentUpon>print.less</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap\theme.css">
       <DependentUpon>theme.less</DependentUpon>
     </Content>
@@ -213,7 +222,11 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\Ambro-Sias_Logo-sm.png" />
+    <Content Include="Content\img\Ambro-Sias_Logo.png" />
     <Content Include="Content\img\bg\Parthenon.jpg" />
+    <Content Include="Content\img\cookie-bag-sm.png" />
+    <Content Include="Content\img\cookie-bag.jpg" />
     <Content Include="Content\img\fabric1.png" />
     <Content Include="Content\img\headerbg.png" />
     <Content Include="Content\site.css" />
@@ -661,6 +674,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <Content Include="Views\Shared\MainLayout.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

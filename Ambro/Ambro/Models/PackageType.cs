@@ -5,7 +5,9 @@ using System.Web;
 
 namespace Ambro.Models
 {
-    public class ProductType
+    public class PackageType
     {
+        public int Id { get; set; }
+        public string Description { get; set; }
     }
 }

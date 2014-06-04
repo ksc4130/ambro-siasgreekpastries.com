@@ -1,21 +1,81 @@
 ﻿<div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <form ng-submit="submitProduct(product)" class="form-horizontal">
+        <div class="col-md-6 borded-sides">
+                    <h4>Add product</h4>
+                    <form ng-submit="submitProduct(product)" class="col-md-12" role="form">
                         <div class="form-group">
-                            <label class="control-label col-md-2">Name</label>
-                            <div class="col-md-10">
-                                <input ng-model="product.name">
-                            </div>
+                            <label class="control-label">Product Name</label>
+                            <input class="form-control" ng-model="product.productName">
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary col-md-offset-2"><i class="fa fa-plus"></i> Add</button>
+                            <label class="control-label">Sub Title</label>
+                            <input class="form-control" ng-model="product.subTitle">
                         </div>
+                        <div class="form-group">
+                            <label class="control-label">Product Type</label>
+                            <select class="form-control" ng-options="category.categoryName for category in categories" ng-model="product.category">
+                                <option value="">-- Select Type --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <textarea class="form-control" ng-model="product.productDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Ingredients</label>
+                            <textarea class="form-control" ng-model="product.ingredients"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button>
                     </form>
-                </div>
-            </div>
+        </div>
+        <div class="col-md-6 borded-right">
+                <h4>Add Product Package</h4>
+                    <form ng-submit="submitProduct(product)" class="col-md-12" role="form">
+                        <div class="form-group">
+                            <label class="control-label">Package Name</label>
+                            <input class="form-control" ng-model="package.packageName">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Product</label>
+                            <select class="form-control" ng-options="product.productName for product in products" ng-model="package.product">
+                                <option value="">-- Select Product --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Price</label>
+                            <textarea class="form-control" ng-model="package.price"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Cost Price</label>
+                            <input class="form-control" ng-model="package.costPrice" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Size</label>
+                            <select class="form-control" ng-model="package.size">
+                                <option value="">-- Select Size --</option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>{{product.size}}
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Piece Size</label>
+                            <input class="form-control" ng-model="package.pieceSize" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Net Weight Pounds</label>
+                            <textarea class="form-control" ng-model="package.netWeightPounds"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Container Size</label>
+                            <textarea class="form-control" ng-model="package.containerSize"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Container Description</label>
+                            <textarea class="form-control" ng-model="package.containerDescription"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button>
+                    </form>
         </div>
     </div>
 </div>

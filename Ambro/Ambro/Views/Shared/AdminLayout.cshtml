@@ -1,0 +1,18 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section nav
+{
+    <a class="text-muted" href="#/products">Pastries</a>
+    <a class="text-muted" href="#/products">Cookies</a>
+<a class="text-muted" href="#/manageProducts">Manage Products</a>
+}
+
+@RenderBody()
+
+@section scripts
+{
+    <script src="/app/admin-config.js"></script>
+}

@@ -11,16 +11,15 @@
             .when('/contact', {
             templateUrl: '/app/tmpls/contact.html'
         })
-            .when('/manageProducts', {
-                templateUrl: '/app/tmpls/manageProducts.html',
-                controller: 'manageProductsCtrl'
-        })
             .when('/products', {
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',
                 resolve: {
-                    products: ['productsSrv', function(productsSrv) {
-                        return productsSrv.getProducts();
+                    products: ['productSrv', function(productSrv) {
+                        return productSrv.getProducts();
+                    }],
+                    packages: ['packageSrv', function(packageSrv) {
+                        return packageSrv.getPackages();
                     }]
                 }
         });

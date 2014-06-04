@@ -10,15 +10,71 @@
     top: 50px;
 }*/
 
+.top-logo {
+    position: fixed;
+    top: -75px;
+    left: -75px;
+    z-index: 999999;
+
+    width: 400px; 
+}
+
 .main-bg {
-    background-color: #DFD8BD;
-    background-image: url('img/bg/Parthenon.jpg');
+    /*background-color: #E1C69D;*/
+    background-color: #efe1cc;
+    /*background-color: #DFD8BD;
+    background-image: url('img/bg/Parthenon.jpg');*/
     -ms-background-size: cover;
     background-size: cover;
 }
 
+.main-nav a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-nav a:hover {
+    text-decoration: none;
+    color: #444;
+}
+
+.main-nav a.active {
+    color: #444;
+}
+
+.text-dark {
+    color: #666;
+}
+
+.text-darker {
+    color: #444;
+}
+
+.text-goldish {
+    color: #c59c71;
+}
+
+.text-yellow {
+    color: #ffcc33;
+}
+
+.borded-sides {
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+.borded-right {
+    border-right: 1px solid #999;
+}
+
+.header {
+    font-weight: bold;
+    border-bottom: 2px solid #444;
+    margin-bottom: 10px;
+}
+
 body {
-    padding-top: 65px;
+    padding-top: 20px;
     padding-bottom: 20px;
 }
 

@@ -12,12 +12,19 @@
             }
 
             url = url[0] === '/' ? url.splice(0, 1) : url;
-            return $resource(apiUrlBase + url, {}, extMethods);
+            return $resource(apiUrlBase + url + '/:action?', {}, extMethods);
         }
 
         var self = {};
 
-        self.products = createApi('products');
+        self.product = createApi('products', {
+            getCategories: { method: 'GET', isArray: true, params: { action: 'getCategories' } }
+            , getProducts: { method: 'GET', isArray: true, params: { action: 'getProducts' } }
+        });
+
+        self.package = createApi('packages', {
+
+        });
 
         return self;
     }

@@ -1,14 +1,12 @@
 ﻿<div class="container">
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div ng-repeat="product in products" class="col-md-4">
-                <div class="thumbnail">
-                    <img class="img-responsive" src="http://placekitten.com/500/500" alt="...">
-                    <div class="caption">
-                        <h3 class="text-muted">{{product.name}}</h3>
-<!--                        <p>...</p>-->
-<!--                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
-                    </div>
+    <div class="row">
+        <div ng-repeat="product in products" class="col-md-4">
+            <div class="thumbnail">
+                <img class="img-responsive" src="http://placekitten.com/500/500" alt="...">
+                <div class="caption">
+                    <h3 class="text-muted">{{product.name}}</h3>
+                    <!--                        <p>...</p>-->
+                    <!--                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
                 </div>
             </div>
         </div>

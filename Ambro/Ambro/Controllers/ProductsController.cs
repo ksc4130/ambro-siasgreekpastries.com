@@ -17,18 +17,37 @@ namespace Ambro.Controllers
         private MongoServer _server;
         private MongoDatabase _database;
         private MongoCollection<Product> _products;
+        private MongoCollection<Package> _packages;
+        private MongoCollection<Category> _categories;
 
         public ProductsController()
         {
             _server = _client.GetServer();
             _database = _server.GetDatabase(Globals.DatabaseName);
             _products = _database.GetCollection<Product>("products");
+            _packages = _database.GetCollection<Package>("packages");
+            _categories = _database.GetCollection<Category>("categories");
+        }
+
+        [HttpGet]
+        [Route("api/products/getCategories")]
+        public IHttpActionResult GetCategories()
+        {
+            return Ok(_categories.FindAll());
+        }
+
+        [HttpGet]
+        [Route("api/products/getProducts")]
+        public IHttpActionResult GetProducts()
+        {
+            var found = _products.FindAll();
+            return Ok(found);
         }
 
         // GET api/<controller>
-        public IEnumerable<Product> Get()
+        public IHttpActionResult Get()
         {
-            return _products.FindAll();
+            return Ok(_packages.FindAll());
         }
 
         // GET api/<controller>/5
