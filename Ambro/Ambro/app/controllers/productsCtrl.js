@@ -1,10 +1,10 @@
 ﻿(function() {
     'use strict';
 
-    productsCtrl.$inject = ['$scope', 'products', 'productSrv'];
+    productsCtrl.$inject = ['$scope', 'packages', 'packageSrv'];
     ambro.controller('productsCtrl', productsCtrl);
-    function productsCtrl($scope, products, productSrv) {
-        $scope.products = products;
-        console.log('products', products);
+    function productsCtrl($scope, packages, packageSrv) {
+        $scope.packages = packages;
+        console.log('packages', packages);
     }
 }());
