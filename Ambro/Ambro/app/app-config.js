@@ -11,6 +11,9 @@
             .when('/contact', {
             templateUrl: '/app/tmpls/contact.html'
         })
+            .when('/catering', {
+                templateUrl: '/app/tmpls/catering.html'
+        })
             .when('/products', {
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',

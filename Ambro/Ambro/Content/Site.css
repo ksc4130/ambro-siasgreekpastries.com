@@ -28,9 +28,14 @@
     background-size: cover;
 }
 
+.main-nav {
+    padding: 20px 20px 20px 20px;
+}
+
 .main-nav a {
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 1.5em;
 }
 
 .main-nav a:hover {
@@ -57,7 +62,18 @@
 .text-yellow {
     color: #ffcc33;
 }
-
+.text-sm {
+    font-size: .75em;
+}
+.text-md {
+    font-size: 1.15em;
+}
+.text-lg {
+    font-size: 1.30em;
+}
+.text-xl {
+    font-size: 1.75em;
+}
 .borded-sides {
     border-right: 1px solid #999;
     border-left: 1px solid #999;
@@ -84,4 +100,8 @@ input {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+hr.spacer {
+    margin-top: 5px;
 }
