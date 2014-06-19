@@ -1,10 +1,10 @@
 ﻿(function() {
     'use strict';
 
-    manageProductsCtrl.$inject = ['$scope', '$timeout', 'productSrv', 'packageSrv', 'categories', 'products', 'packages'];
+    manageProductsCtrl.$inject = ['$scope', '$timeout', 'productSrv', 'packageSrv', 'categories', 'products', 'packages', '$upload'];
     ambro.controller('manageProductsCtrl', manageProductsCtrl);
 
-    function manageProductsCtrl($scope, $timeout, productSrv, packageSrv, categories, products, packages) {
+    function manageProductsCtrl($scope, $timeout, productSrv, packageSrv, categories, products, packages, $upload) {
         $scope.product = productSrv.create();
         $scope.package = packageSrv.create();
         
@@ -40,13 +40,25 @@
         };
 
         $scope.submitProduct = function (product) {
-            console.log('submit', product);
             product.$save();
+            $scope.product = {};
         };
 
         $scope.submitPackage = function (newPackage) {
-            console.log('submit', newPackage);
-            newPackage.$save();
+            $scope.upload = $upload.upload({
+                url: '/api/packages',
+                method: 'POST',
+                data: { newPackage: JSON.stringify(newPackage) },
+                file: $scope.imgFile, 
+            }).progress(function (evt) {
+                console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+            }).success(function (data, status, headers, config) {
+                // file is uploaded successfully
+                console.log('success', data);
+                $scope.package = {};
+            });
+            
+            //newPackage.$save();
         };
     }
 }());

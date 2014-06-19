@@ -2,7 +2,7 @@
     <div class="row">
         <div ng-repeat="package in packages" class="col-md-2">
             <div class="thumbnail">
-                <img class="img-responsive" src="http://placekitten.com/500/500" alt="...">
+                <img class="img-responsive" src="{{package.imgUrl}}" alt="..."> <!--src="http://placekitten.com/500/500"-->
                 <div class="caption">
                     <h5>{{package.packageName}} <small class="text-muted">({{package.price}})</small></h5>
                 </div>
