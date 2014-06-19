@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>angular-strap</id>
+    <version>2.0.2</version>
+    <authors>Olivier Louvignes and contributors</authors>
+    <owners>Olivier Louvignes and contributors</owners>
+    <licenseUrl>https://raw.github.com/mgcrea/angular-strap/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/mgcrea/angular-strap</projectUrl>
+    <iconUrl>http://mgcrea.github.io/angular-strap/static/images/snippet-logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AngularStrap - AngularJS directives for Twitter Bootstrap</description>
+    <summary>AngularStrap is a set of native directives that enables seamless integration of Twitter Bootstrap 3.0+ into your AngularJS 1.2+ app.
+
+With no external dependency except the Twitter Bootstrap CSS styles, AngularStrap is lighter and faster than ever as it does leverage the power of ngAnimate from AngularJS 1.2+!</summary>
+    <copyright>Copyright Olivier Louvignes 2014</copyright>
+    <tags>angular bootstrap</tags>
+    <dependencies>
+      <dependency id="bootstrap" version="[3.0.0, 4.0.0)" />
+      <dependency id="AngularJS.Core" version="[1.2.0, 2.0.0)" />
+    </dependencies>
+  </metadata>
+</package>
