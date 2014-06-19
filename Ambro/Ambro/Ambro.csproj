@@ -187,6 +187,7 @@
     <Content Include="app\services\apiSrv.js" />
     <Content Include="app\services\packageSrv.js" />
     <Content Include="app\services\productSrv.js" />
+    <Content Include="app\tmpls\catering.html" />
     <Content Include="app\tmpls\contact.html" />
     <Content Include="app\tmpls\home.html" />
     <Content Include="app\tmpls\manageProducts.html" />
@@ -203,6 +204,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\img\Ambro-Sias_Banner.jpg" />
     <Content Include="Content\img\Ambro-Sias_Logo-sm.png" />
     <Content Include="Content\img\Ambro-Sias_Logo.png" />
     <Content Include="Content\img\bg\Parthenon.jpg" />
