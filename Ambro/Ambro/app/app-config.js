@@ -22,6 +22,16 @@
                         return packageSrv.getPackages();
                     }]
                 }
+        })
+            .when('/product/:packageId', {
+                templateUrl: '/app/tmpls/product.html',
+                controller: 'productCtrl',
+                resolve: {
+                    pack: ['packageSrv', '$route', function (productSrv, $route) {
+                        console.log($route.current.params.packageId);
+                        return productSrv.getPackageById($route.current.params.packageId);
+                    }]
+                }
         });
     }
 

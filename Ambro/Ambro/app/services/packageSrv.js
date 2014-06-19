@@ -14,6 +14,10 @@
             return apiSrv.package.query().$promise;
         };
 
+        self.getPackageById = function(packageId) {
+            return apiSrv.package.get({packageId: packageId}).$promise;
+        };
+
         return self;
     }
 }());

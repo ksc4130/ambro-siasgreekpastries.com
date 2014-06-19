@@ -34,9 +34,9 @@ namespace Ambro.Controllers
             return Ok(_packages.FindAll());
         }
 
-        public IHttpActionResult Get(string id)
+        public IHttpActionResult Get(string packageId)
         {
-            return Ok(_packages.FindOneById(new ObjectId(id)));
+            return Ok(_packages.FindOneById(new ObjectId(packageId)));
         }
 
         public async Task<IHttpActionResult> Post()

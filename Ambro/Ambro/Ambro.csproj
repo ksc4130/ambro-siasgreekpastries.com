@@ -182,6 +182,7 @@
     <Content Include="app\app.js" />
     <Content Include="app\controllers\homeCtrl.js" />
     <Content Include="app\controllers\manageProductsCtrl.js" />
+    <Content Include="app\controllers\productCtrl.js" />
     <Content Include="app\controllers\productsCtrl.js" />
     <Content Include="app\services\apiSrv.js" />
     <Content Include="app\services\packageSrv.js" />
@@ -189,6 +190,7 @@
     <Content Include="app\tmpls\contact.html" />
     <Content Include="app\tmpls\home.html" />
     <Content Include="app\tmpls\manageProducts.html" />
+    <Content Include="app\tmpls\product.html" />
     <Content Include="app\tmpls\products.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\angular-motion.min.css" />

@@ -23,7 +23,7 @@
         });
 
         self.package = createApi('packages', {
-
+            
         });
 
         return self;
