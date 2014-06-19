@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Ambro.Models
 {
     public class Package
     {
-        public int Id { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         public string PackageName { get; set; }
+        public string ImgUrl { get; set; }
 //        public int PackageTypeId { get; set; }
         public decimal Price { get; set; }
         public decimal CostPrice { get; set; }
