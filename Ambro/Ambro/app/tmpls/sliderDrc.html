@@ -1,0 +1,17 @@
+﻿<div class="{{img.sliderClass}}" style="position: absolute;" ng-repeat="img in disImgs">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="text-center">{{img.title}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <img ng-src="{{img.imgUrl}}" class="img-responsive img-circle img-thumbnail" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p>{{img.description}}</p>
+        </div>
+    </div>
+</div>
