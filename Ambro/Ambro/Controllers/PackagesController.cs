@@ -64,7 +64,7 @@ namespace Ambro.Controllers
         {
             if (!Request.Content.IsMimeMultipartContent())
             {
-                this.Request.CreateResponse(HttpStatusCode.UnsupportedMediaType);
+                Request.CreateResponse(HttpStatusCode.UnsupportedMediaType);
             }
 
             var provider = GetMultipartProvider();
@@ -93,9 +93,9 @@ namespace Ambro.Controllers
 
             _packages.Save(package);
 
-            var uri = Url.Link("~/api/package", new {id = package.Id});
+            //var uri = Url.Link("~/api/packages", new { packageId = package.Id });
 
-            return Created(uri, package);
+            return Ok();
         }
 
         // You could extract these two private methods to a separate utility class since
