@@ -76,15 +76,18 @@
     font-size: 1.30em;
 }
 .text-xl {
+    font-size: 1.45em;
+}
+.text-xxl {
     font-size: 1.75em;
 }
 .borded-sides {
-    border-right: 1px solid #999;
-    border-left: 1px solid #999;
+    border-right: 1px solid #696969;
+    border-left: 1px solid #696969;
 }
 
 .borded-right {
-    border-right: 1px solid #999;
+    border-right: 1px solid #bdbdbd;
 }
 
 .border-hor-wrapper .border-hor-child {
@@ -123,7 +126,8 @@ input {
 }
 
 hr.spacer {
-    margin-top: 5px;
+    margin-bottom: 10px !important;
+    border-top: 1px solid #bdbdbd !important;
 }
 
 .items-table {
