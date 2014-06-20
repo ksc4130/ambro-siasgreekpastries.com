@@ -5,11 +5,11 @@
 
 @section nav
 {
-    <a class="text-muted" href="#/assortments">Assortments</a>
-    <a class="text-muted" href="#/pastries">Pastries</a>
-    <a class="text-muted" href="#/cookies">Cookies</a>
-    <a class="text-muted" href="#/catering">Catering</a>
-    <a class="text-muted" href="#/contact">Request Information</a>&nbsp;
+    <a ng-class="{active: active('assortments')}" href="#/assortments">Assortments</a>
+    <a ng-class="{active: active('pastries')}" href="#/pastries">Pastries</a>
+    <a ng-class ="{active: active('cookies')}" href="#/cookies">Cookies</a>
+    <a ng-class ="{active: active('catering')}" href="#/catering">Catering</a>
+    <a ng-class="{active: active('contact')}" href="#/contact">Request Information</a>&nbsp;
 }
 
 @RenderBody()

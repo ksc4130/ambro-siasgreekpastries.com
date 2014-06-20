@@ -6,7 +6,9 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <img ng-src="{{img.imgUrl}}" class="img-responsive img-circle img-thumbnail" />
+            <a href="{{img.href || ''}}">
+                <img ng-src="{{img.imgUrl}}" class="img-responsive img-circle img-thumbnail" />
+            </a>
         </div>
     </div>
     <div class="row">

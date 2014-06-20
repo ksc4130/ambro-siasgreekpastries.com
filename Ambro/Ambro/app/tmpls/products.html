@@ -3,8 +3,10 @@
         <div ng-repeat="package in packages" class="col-md-3">
             <a style="text-decoration: none;" href="#/product/{{package.id}}">
                 <img class="img-responsive" ng-src="{{package.imgUrl}}" alt="...">
-                <h5 class="text-dark">{{package.packageName | limitTo:20}} <dots value="package.packageName" limit="20"></dots> <small class="text-muted">({{package.price | currency}})</small></h5>
-                <p class="text-light">{{package.containerDescription | limitTo: 100}}<dots value="package.containerDescription" limit="100"></dots></p>
+                <h4 class="text-darker text-center">{{package.product.productName}}</h4>
+                <h5  class="text-dark text-center">{{package.packageName | limitTo:20}} <dots value="package.packageName" limit="20"></dots> <small class="text-muted"></small></h5>
+                <h3 style="margin-top: 0; margin-bottom: 40px;" class="text-center">{{package.price | currency}}</h3>
+<!--                <p class="text-light">{{package.containerDescription | limitTo: 100}}<dots value="package.containerDescription" limit="100"></dots></p>-->
             </a>
             
         </div>

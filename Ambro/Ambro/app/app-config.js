@@ -6,7 +6,12 @@
         $routeProvider.otherwise('/')
             .when('/', {
                 templateUrl: '/app/tmpls/home.html',
-                controller: 'homeCtrl'
+                controller: 'homeCtrl',
+                resolve: {
+                    packages: ['packageSrv', function(packageSrv) {
+                        return packageSrv.getPackages();
+                    }]
+                }
             })
             .when('/contact', {
                 templateUrl: '/app/tmpls/contact.html'

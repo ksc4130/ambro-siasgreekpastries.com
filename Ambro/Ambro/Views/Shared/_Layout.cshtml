@@ -41,15 +41,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <h3 style="margin-bottom: -10px;" class="text-muted">Authentic Greek Pastries</h3>
-            </div>
-            <div class="col-md-6 col-md-offset-2 main-nav">
+@*            <div class="col-md-4">*@
+@*                <h3 style="margin-bottom: -10px;" class="text-muted">Authentic Greek Pastries</h3>*@
+@*            </div>*@
+            <div ng-controller="headerCtrl" class="col-md-10 main-nav">
                 @RenderSection("nav")
             </div>
         </div>
         <div class="row">
-            <hr class="spacer" />
+            <hr style="margin-top: 0;" class="spacer" />
         </div>
     </div>
 
@@ -77,6 +77,7 @@
     <script src="/app/services/productSrv.js"></script>
     <script src="/app/services/packageSrv.js"></script>
 
+    <script src="/app/controllers/headerCtrl.js"></script>
     <script src="/app/controllers/homeCtrl.js"></script>
     <script src="/app/controllers/productsCtrl.js"></script>
     <script src="/app/controllers/productCtrl.js"></script>
