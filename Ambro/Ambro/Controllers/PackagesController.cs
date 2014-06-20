@@ -40,7 +40,7 @@ namespace Ambro.Controllers
         {
             var packages = _packages.FindAll().ToList();
             return Ok(packages
-                    .Where(x =>
+                .Where(x => x.Product.Category != null &&
                             string.Compare(x.Product.Category.CategoryName, "pastry",
                                 StringComparison.OrdinalIgnoreCase) == 0));
         }
@@ -50,8 +50,18 @@ namespace Ambro.Controllers
         {
             var packages = _packages.FindAll().ToList();
             return Ok(packages
-                    .Where(x =>
+                    .Where(x => x.Product.Category != null &&
                             string.Compare(x.Product.Category.CategoryName, "cookie",
+                                StringComparison.OrdinalIgnoreCase) == 0));
+        }
+
+        [Route("api/packages/getAssortments")]
+        public IHttpActionResult GetAssortments()
+        {
+            var packages = _packages.FindAll().ToList();
+            return Ok(packages
+                    .Where(x => x.Product.Category != null &&
+                            string.Compare(x.Product.Category.CategoryName, "assortment",
                                 StringComparison.OrdinalIgnoreCase) == 0));
         }
 

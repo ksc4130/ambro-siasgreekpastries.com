@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function () {
     'use strict';
 
     config.$inject = ['$routeProvider'];
@@ -7,53 +7,65 @@
             .when('/', {
                 templateUrl: '/app/tmpls/home.html',
                 controller: 'homeCtrl'
-        })
+            })
             .when('/contact', {
-            templateUrl: '/app/tmpls/contact.html'
-        })
+                templateUrl: '/app/tmpls/contact.html'
+            })
             .when('/catering', {
                 templateUrl: '/app/tmpls/catering.html'
-        })
+            })
             .when('/products', {
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',
                 resolve: {
                     products: [
-                        'productSrv', function(productSrv) {
+                        'productSrv', function (productSrv) {
                             return productSrv.getProducts();
                         }
                     ],
                     packages: [
-                        'packageSrv', function(packageSrv) {
+                        'packageSrv', function (packageSrv) {
                             return packageSrv.getPackages();
                         }
                     ]
+                }
+            })
+            .when('/assortments', {
+                templateUrl: '/app/tmpls/products.html',
+                controller: 'productsCtrl',
+                resolve: {
+                    products: ['productSrv', function (productSrv) {
+                        return productSrv.getProducts();
+                    }],
+                    packages: ['packageSrv', function (packageSrv) {
+                        return packageSrv.getAssortments();
+                    }]
                 }
             })
             .when('/pastries', {
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',
                 resolve: {
-                    products: ['productSrv', function(productSrv) {
+                    products: ['productSrv', function (productSrv) {
                         return productSrv.getProducts();
                     }],
-                    packages: ['packageSrv', function(packageSrv) {
+                    packages: ['packageSrv', function (packageSrv) {
                         return packageSrv.getPastries();
                     }]
                 }
-        })
+            })
             .when('/cookies', {
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',
                 resolve: {
-                    products: ['productSrv', function(productSrv) {
+                    products: ['productSrv', function (productSrv) {
                         return productSrv.getProducts();
                     }],
-                    packages: ['packageSrv', function(packageSrv) {
+                    packages: ['packageSrv', function (packageSrv) {
                         return packageSrv.getCookies();
                     }]
                 }
-        })
+            })
             .when('/product/:packageId', {
                 templateUrl: '/app/tmpls/product.html',
                 controller: 'productCtrl',
@@ -63,7 +75,7 @@
                         return productSrv.getPackageById($route.current.params.packageId);
                     }]
                 }
-        });
+            });
     }
 
     ambro.config(config);

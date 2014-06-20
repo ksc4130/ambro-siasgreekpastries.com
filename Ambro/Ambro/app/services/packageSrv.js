@@ -22,6 +22,10 @@
             return apiSrv.package.getCookies().$promise;
         };
 
+        self.getAssortments = function () {
+            return apiSrv.package.getAssortments().$promise;
+        };
+
         self.getPackageById = function(packageId) {
             return apiSrv.package.get({packageId: packageId}).$promise;
         };

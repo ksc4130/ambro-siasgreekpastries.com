@@ -26,6 +26,7 @@
         self.package = createApi('packages', {
             getPastries: { method: 'GET', isArray: true, params: { action: 'getPastries' } }
             , getCookies: { method: 'GET', isArray: true, params: { action: 'getCookies' } }
+            , getAssortments: { method: 'GET', isArray: true, params: { action: 'getAssortments' } }
         });
 
         return self;
