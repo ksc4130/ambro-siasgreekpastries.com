@@ -73,14 +73,20 @@
 .text-md {
     font-size: 1.15em;
 }
+.text-md-lg {
+    font-size: 1.35em;
+}
 .text-lg {
-    font-size: 1.30em;
+    font-size: 1.50em;
 }
 .text-xl {
-    font-size: 1.45em;
+    font-size: 1.75em;
 }
 .text-xxl {
-    font-size: 1.75em;
+    font-size: 2em;
+}
+.text-bold {
+    font-weight: bold;
 }
 .borded-sides {
     border-right: 1px solid #696969;
