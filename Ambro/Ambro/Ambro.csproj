@@ -194,6 +194,7 @@
     <Content Include="app\tmpls\manageProducts.html" />
     <Content Include="app\tmpls\product.html" />
     <Content Include="app\tmpls\products.html" />
+    <Content Include="app\tmpls\sliderDrc.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\angular-motion.min.css" />
     <Content Include="Content\bootstrap-datepicker.css" />
@@ -221,6 +222,19 @@
     <Content Include="Content\img\cookie-bag.jpg" />
     <Content Include="Content\img\fabric1.png" />
     <Content Include="Content\img\headerbg.png" />
+    <Content Include="Content\img\slider\IMG_0896.jpg" />
+    <Content Include="Content\img\slider\IMG_0900.jpg" />
+    <Content Include="Content\img\slider\IMG_0904.jpg" />
+    <Content Include="Content\img\slider\IMG_0907.jpg" />
+    <Content Include="Content\img\slider\IMG_0910.jpg" />
+    <Content Include="Content\img\slider\IMG_0911.jpg" />
+    <Content Include="Content\img\slider\IMG_0915.jpg" />
+    <Content Include="Content\img\slider\IMG_0916two.jpg" />
+    <Content Include="Content\img\slider\IMG_0920two.jpg" />
+    <Content Include="Content\img\slider\IMG_0933.jpg" />
+    <Content Include="Content\img\slider\IMG_0940.jpg" />
+    <Content Include="Content\img\slider\IMG_0942.jpg" />
+    <Content Include="Content\img\slider\IMG_0950.jpg" />
     <Content Include="Content\site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />

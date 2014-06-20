@@ -27,16 +27,23 @@
             templateUrl: '/app/tmpls/sliderDrc.html',
             scope: {
                 imgs: '=',
-                interval: '@'
+                interval: '@',
+                defaultClass: '@',
+                inClass: '@',
+                outClass: '@'
             },
             link: function (scope, el, attrs) {
+                var defaultClass = scope.defaultClass || 'am-fade',
+                    inClass = scope.inClass || defaultClass,
+                    outClass = scope.outClass || defaultClass;
+
                 scope.imgs.forEach(function(item) {
-                    item.sliderClass = 'am-fade';//'am-slide-right';
+                    item.sliderClass = scope.inClass;//'am-fade';//'am-slide-right';
                 });
 
                 scope.disImgs = [];
                 scope.disImgs.push(scope.imgs[0]);
-                //scope.disImgs[0].sliderClass = 'am-slide-left';
+                scope.disImgs[0].sliderClass = outClass;
                 scope.interval = scope.interval || 1500;
 
                 var curIndex = 0;
@@ -47,12 +54,11 @@
                         curIndex = 0;
                     }
 
-                    console.log('cur index', curIndex, scope.imgs[curIndex].sliderClass);
-
-                   // scope.disImgs[0].sliderClass = 'am-slide-right';
+                    var out = scope.disImgs[0];
                     scope.disImgs = [];
                     scope.disImgs.push(scope.imgs[curIndex]);
-                    //scope.disImgs[0].sliderClass = 'am-slide-left';
+                    scope.disImgs[0].sliderClass = outClass;
+                    out.sliderClass = inClass;
                 }, scope.interval);
             }
         }

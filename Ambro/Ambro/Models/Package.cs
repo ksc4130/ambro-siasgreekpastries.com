@@ -15,9 +15,9 @@ namespace Ambro.Models
         public string ImgUrl { get; set; }
 //        public int PackageTypeId { get; set; }
         public decimal Price { get; set; }
-        public decimal CostPrice { get; set; }
-        public int PackQuantity { get; set; }
-        public decimal NetWeightPounds { get; set; }
+        public decimal? CostPrice { get; set; }
+        public int? PackQuantity { get; set; }
+        public string NetWeightPounds { get; set; }
         public string ContainerSize { get; set; }
         public string ContainerDescription { get; set; }
         public string Size { get; set; }
