@@ -140,3 +140,7 @@ hr.spacer {
 .items-table {
     margin-top: 15px;
 }
+div.items-table table thead tr th {
+    background-color: #422819;
+    color: #fff;
+}
