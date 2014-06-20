@@ -14,6 +14,14 @@
             return apiSrv.package.query().$promise;
         };
 
+        self.getPastries = function() {
+            return apiSrv.package.getPastries().$promise;
+        };
+
+        self.getCookies = function() {
+            return apiSrv.package.getCookies().$promise;
+        };
+
         self.getPackageById = function(packageId) {
             return apiSrv.package.get({packageId: packageId}).$promise;
         };

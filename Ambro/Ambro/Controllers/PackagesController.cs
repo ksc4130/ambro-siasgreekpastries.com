@@ -10,6 +10,7 @@ using System.Web.Http;
 using Ambro.Models;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 using Newtonsoft.Json;
 
 namespace Ambro.Controllers
@@ -32,6 +33,26 @@ namespace Ambro.Controllers
         public IHttpActionResult Get()
         {
             return Ok(_packages.FindAll());
+        }
+
+        [Route("api/packages/getPastries")]
+        public IHttpActionResult GetPasties()
+        {
+            var packages = _packages.FindAll().ToList();
+            return Ok(packages
+                    .Where(x =>
+                            string.Compare(x.Product.Category.CategoryName, "pastry",
+                                StringComparison.OrdinalIgnoreCase) == 0));
+        }
+
+        [Route("api/packages/getCookies")]
+        public IHttpActionResult GetCookies()
+        {
+            var packages = _packages.FindAll().ToList();
+            return Ok(packages
+                    .Where(x =>
+                            string.Compare(x.Product.Category.CategoryName, "cookie",
+                                StringComparison.OrdinalIgnoreCase) == 0));
         }
 
         public IHttpActionResult Get(string packageId)

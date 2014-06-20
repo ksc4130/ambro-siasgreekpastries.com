@@ -18,11 +18,39 @@
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',
                 resolve: {
+                    products: [
+                        'productSrv', function(productSrv) {
+                            return productSrv.getProducts();
+                        }
+                    ],
+                    packages: [
+                        'packageSrv', function(packageSrv) {
+                            return packageSrv.getPackages();
+                        }
+                    ]
+                }
+            })
+            .when('/pastries', {
+                templateUrl: '/app/tmpls/products.html',
+                controller: 'productsCtrl',
+                resolve: {
                     products: ['productSrv', function(productSrv) {
                         return productSrv.getProducts();
                     }],
                     packages: ['packageSrv', function(packageSrv) {
-                        return packageSrv.getPackages();
+                        return packageSrv.getPastries();
+                    }]
+                }
+        })
+            .when('/cookies', {
+                templateUrl: '/app/tmpls/products.html',
+                controller: 'productsCtrl',
+                resolve: {
+                    products: ['productSrv', function(productSrv) {
+                        return productSrv.getProducts();
+                    }],
+                    packages: ['packageSrv', function(packageSrv) {
+                        return packageSrv.getCookies();
                     }]
                 }
         })

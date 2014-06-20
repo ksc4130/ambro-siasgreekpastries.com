@@ -20,10 +20,12 @@
         self.product = createApi('products', {
             getCategories: { method: 'GET', isArray: true, params: { action: 'getCategories' } }
             , getProducts: { method: 'GET', isArray: true, params: { action: 'getProducts' } }
+            
         });
 
         self.package = createApi('packages', {
-            
+            getPastries: { method: 'GET', isArray: true, params: { action: 'getPastries' } }
+            , getCookies: { method: 'GET', isArray: true, params: { action: 'getCookies' } }
         });
 
         return self;

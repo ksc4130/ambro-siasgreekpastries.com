@@ -47,7 +47,7 @@ namespace Ambro.Controllers
         // GET api/<controller>
         public IHttpActionResult Get()
         {
-            return Ok(_packages.FindAll());
+            return Ok(_packages.FindAll().Where(x => string.Compare(x.Product.Category.CategoryName, "pastries", StringComparison.OrdinalIgnoreCase) == 0));
         }
 
         // GET api/<controller>/5
