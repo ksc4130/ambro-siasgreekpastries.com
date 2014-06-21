@@ -67,6 +67,9 @@
 .text-yellow {
     color: #ffcc33;
 }
+.text-blue {
+    color: #428bca;
+}
 .text-sm {
     font-size: .75em;
 }
