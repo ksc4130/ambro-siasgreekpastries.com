@@ -125,7 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\img\packages\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AmbroConfig.cs" />
@@ -224,6 +223,56 @@
     <Content Include="Content\img\cookie-bag.jpg" />
     <Content Include="Content\img\fabric1.png" />
     <Content Include="Content\img\headerbg.png" />
+    <Content Include="Content\img\packages\IMG_0896.jpg" />
+    <Content Include="Content\img\packages\IMG_0897.jpg" />
+    <Content Include="Content\img\packages\IMG_0898.jpg" />
+    <Content Include="Content\img\packages\IMG_0899.jpg" />
+    <Content Include="Content\img\packages\IMG_0900.jpg" />
+    <Content Include="Content\img\packages\IMG_0900two.jpg" />
+    <Content Include="Content\img\packages\IMG_0901.jpg" />
+    <Content Include="Content\img\packages\IMG_0901two.jpg" />
+    <Content Include="Content\img\packages\IMG_0904.jpg" />
+    <Content Include="Content\img\packages\IMG_0905.jpg" />
+    <Content Include="Content\img\packages\IMG_0905two.jpg" />
+    <Content Include="Content\img\packages\IMG_0907.jpg" />
+    <Content Include="Content\img\packages\IMG_0908.jpg" />
+    <Content Include="Content\img\packages\IMG_0910.jpg" />
+    <Content Include="Content\img\packages\IMG_0911.jpg" />
+    <Content Include="Content\img\packages\IMG_0911two.jpg" />
+    <Content Include="Content\img\packages\IMG_0912.jpg" />
+    <Content Include="Content\img\packages\IMG_0912two.jpg" />
+    <Content Include="Content\img\packages\IMG_0913.jpg" />
+    <Content Include="Content\img\packages\IMG_0913two.jpg" />
+    <Content Include="Content\img\packages\IMG_0915.jpg" />
+    <Content Include="Content\img\packages\IMG_0916.jpg" />
+    <Content Include="Content\img\packages\IMG_0916two.jpg" />
+    <Content Include="Content\img\packages\IMG_0917.jpg" />
+    <Content Include="Content\img\packages\IMG_0917two.jpg" />
+    <Content Include="Content\img\packages\IMG_0918.jpg" />
+    <Content Include="Content\img\packages\IMG_0918two.jpg" />
+    <Content Include="Content\img\packages\IMG_0920.jpg" />
+    <Content Include="Content\img\packages\IMG_0920two.jpg" />
+    <Content Include="Content\img\packages\IMG_0921.jpg" />
+    <Content Include="Content\img\packages\IMG_0924.jpg" />
+    <Content Include="Content\img\packages\IMG_0925.jpg" />
+    <Content Include="Content\img\packages\IMG_0927.jpg" />
+    <Content Include="Content\img\packages\IMG_0928.jpg" />
+    <Content Include="Content\img\packages\IMG_0929.jpg" />
+    <Content Include="Content\img\packages\IMG_0931.jpg" />
+    <Content Include="Content\img\packages\IMG_0933.jpg" />
+    <Content Include="Content\img\packages\IMG_0936.jpg" />
+    <Content Include="Content\img\packages\IMG_0936two.jpg" />
+    <Content Include="Content\img\packages\IMG_0937.jpg" />
+    <Content Include="Content\img\packages\IMG_0938.jpg" />
+    <Content Include="Content\img\packages\IMG_0938two.jpg" />
+    <Content Include="Content\img\packages\IMG_0939.jpg" />
+    <Content Include="Content\img\packages\IMG_0940.jpg" />
+    <Content Include="Content\img\packages\IMG_0941.jpg" />
+    <Content Include="Content\img\packages\IMG_0942.jpg" />
+    <Content Include="Content\img\packages\IMG_0944.jpg" />
+    <Content Include="Content\img\packages\IMG_0945.jpg" />
+    <Content Include="Content\img\packages\IMG_0949.jpg" />
+    <Content Include="Content\img\packages\IMG_0950.jpg" />
     <Content Include="Content\img\slider\IMG_0896.jpg" />
     <Content Include="Content\img\slider\IMG_0900.jpg" />
     <Content Include="Content\img\slider\IMG_0904.jpg" />

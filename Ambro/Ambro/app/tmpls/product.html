@@ -1,7 +1,21 @@
 ﻿<div class="container">
     <div class="row">
         <div class="col-md-6">
-                <img class="img-responsive img-thumbnail img-circle" src="{{package.imgUrl}}" alt="...">
+            <img class="img-responsive img-thumbnail" src="{{package.imgUrl}}" alt="...">
+        </div>
+        <div class="col-md-6 text-dark">
+            <h2 class="text-darker">{{package.product.productName}}</h2>
+            <h4 ng-if="package.size && package.size.length">Package Size: {{package.size}}</h4>
+            <h4>Container: {{package.packageName}}</h4>
+            <h4 ng-if="package.containerSize && package.containerSize.length">Container Dimensions: {{package.containerSize}}</h4>
+            <h4 ng-if="package.packQuantity && package.packQuantity.length">Pieces: {{package.packQuantity}}</h4>
+            <h4 ng-if="package.pieceSize && package.pieceSize.length">Piece Size: {{package.pieceSize}}</h4>
+            <h4 ng-if="package.containerDescription && package.containerDescription.length">{{package.containerDescription}}</h4>
+            <h4 ng-if="package.netWeightPounds && package.netWeightPounds.length">Net Weight: {{package.netWeightPounds}}</h4>
+            <p class="text-md">
+                {{package.product.productDescription}}
+            </p>
+            <h3 style="margin-top: 40px; margin-bottom: 40px;" class="text-blue">{{package.price | currency}}</h3>
         </div>
     </div>
 </div>
