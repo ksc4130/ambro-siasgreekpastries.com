@@ -1,19 +1,140 @@
-﻿<div class="container">
+﻿<style>
+    .home-thumbnail {
+        padding: 15px;
+        background-color: #8d7f52;
+        border: 1px solid #6b5d30;
+    }
+
+    .thumb-wrapper {
+        width: 80%;
+        margin-left: 10%;
+        padding: 10%;
+        /*padding: 10px;*/
+        background-color: #8d7f52;
+        /*border: 1px solid #6b5d30;*/
+    }
+
+    #cf2 {
+        position: relative;
+        width: 500px;
+        height: 333px;
+        margin: 0 auto;
+    }
+
+        #cf2 img {
+            position: absolute;
+            left: 0;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+        }
+
+            #cf2 img.transparent {
+                opacity: 0;
+            }
+
+
+    #slide1_container {
+        width: 500px;
+        height: 333px;
+        overflow: hidden; /* So the sliding bit doesn't stick out. */
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #slide1_images {
+        /* This is the bit that moves. It has 4 images, so 4 * 450 = 1800. You could use javascript
+    to work this out instead by counting images. */
+        /*width: 1800px;*/
+        -webkit-transition: all 1.0s ease-in-out;
+        -moz-transition: all 1.0s ease-in-out;
+        -o-transition: all 1.0s ease-in-out;
+        transition: all 1.0s ease-in-out;
+    }
+
+        #slide1_images .img {
+            width: 500px;
+            height: 333px;
+            background-size: contain;
+            padding: 0;
+            margin: 0;
+            float: left; /* All the images are in a row next to each other. */
+        }
+
+        #slide1_images img {
+            padding: 0;
+            margin: 0;
+            float: left; /* All the images are in a row next to each other. */
+        }
+
+    .sl {
+        position: absolute;
+        -webkit-transition: left 1s ease-in-out;
+        -moz-transition: left 1s ease-in-out;
+        -o-transition: left 1s ease-in-out;
+        transition: left 1s ease-in-out;
+    }
+</style>
+
+<div style="background-image: url(/Content/img/packages/IMG_0896.jpg)"></div>
+
+<div class="container">
+    <!--<div class="row">
+            <div id="cf2" class="shadow">
+                <img ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" ng-class="{transparent: !img.active}" />
+            </div>
+        </div>-->
+
     <div class="row">
-<<<<<<< .mine        <div class="col-md-4">
-            <slider imgs="imgs" interval="3000"></slider>
-=======        <div class="col-md-4 borded-right">
-            <h2>Little about us....</h2>
-            <p class="text-justify text-md-lg text-dark">
-                Our delicious, authentic, Greek cookies and pastries can be served after lunch, dinner, as a snack, or could make a perfect gift.  Your family and friends will enjoy the wonderful aroma of the spices and the delectable taste. Treat yourself or give as a gift to someone special!
-            </p>
-            <img style="height: 200px; display: block; margin-left: auto; margin-right: auto;" src="/Content/img/cookie-bag-sm.png" />
->>>>>>> .theirs        </div>
         <div class="col-md-4">
-            <slider imgs="imgs" interval="3000"></slider>
+            <div id="sl_container" class="shadow">
+                <figure>
+                    <img class="img-responsive" ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" />
+                </figure>
+            </div>
         </div>
-        <div class="col-md-4">
-            <slider imgs="imgs" interval="3000"></slider>
+<!--        <div class="col-md-4">-->
+<!--            <div id="slide1_container" class="shadow">-->
+<!--                <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">-->
+<!--                    <img class="img-responsive" ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" />-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+    
+    <!--<div class="row">
+
+        <div id="slide1_container" class="shadow">
+            <div id="slide1_images">
+                <img class="sl" ng-style="imgOne.style" ng-src="{{imgOne.imgUrl}}" />
+                <img class="sl" ng-style="imgTwo.style" ng-src="{{imgTwo.imgUrl}}" />
+                <img class="sl" ng-style="imgThree.style" ng-src="{{imgThree.imgUrl}}" />
+            </div>
+        </div>
+    </div>-->
+    
+    
+    <!--    <div class="row">-->
+<!---->
+<!--        <div id="slide1_container" class="shadow">-->
+<!--            <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">-->
+<!--                <img class="img" ng-repeat="img in slideImgs" ng-src="{{img.imgUrl}}" />-->
+<!--            </div>-->
+<!--        </div>-->
+    <!--    </div>-->
+    
+    
+    <!--<div class="col-md-4">
+        <div class="thumb-wrapper">
+            <slider imgs="imgs" interval="3000" title="false" description="false" round="false"></slider>
         </div>
     </div>
+    <div class="col-md-4">
+        <slider imgs="imgs" interval="3000" title="false" thumbnail-class="'home-thumbnail'" description="false" round="false"></slider>
+    </div>
+    <div class="col-md-4">
+        <slider imgs="imgs" interval="3000" title="false" thumbnail-class="'home-thumbnail'" description="false" round="false"></slider>
+    </div>-->
+
 </div>

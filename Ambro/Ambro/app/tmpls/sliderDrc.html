@@ -1,17 +1,17 @@
-﻿<div class="{{img.sliderClass}}" style="position: absolute;" ng-repeat="img in disImgs">
-    <div class="row">
+﻿<div  ng-repeat="img in disImgs"> <!--style="position: absolute;"-->
+    <div ng-if="title">  <!--class="row"-->
         <div class="col-sm-12">
             <h1 class="text-center">{{img.title}}</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
+    <!--<div class="row">-->
+    <div style="overflow: hidden; height: 100%;"> <!--class="col-sm-12"-->
             <a href="{{img.href || ''}}">
-                <img ng-src="{{img.imgUrl}}" class="img-responsive img-circle img-thumbnail" />
+                <img style="max-width: 100%;" ng-src="{{img.imgUrl}}" />  <!--ng-class="{'img-circle': round}" class="img-responsive {{thumbnailClass || 'img-thumbnail'}}"--> 
             </a>
         </div>
-    </div>
-    <div class="row">
+   <!--</div>-->
+    <div ng-if="description">  <!--class="row"-->
         <div class="col-sm-12">
             <p>{{img.description}}</p>
         </div>
