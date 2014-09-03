@@ -218,11 +218,14 @@
     <Content Include="Content\img\Ambro-Sias_Banner_2000.jpg" />
     <Content Include="Content\img\Ambro-Sias_Logo-sm.png" />
     <Content Include="Content\img\Ambro-Sias_Logo.png" />
+    <Content Include="Content\img\AmbroNavTile-BG.png" />
     <Content Include="Content\img\bg\Parthenon.jpg" />
     <Content Include="Content\img\cookie-bag-sm.png" />
     <Content Include="Content\img\cookie-bag.jpg" />
     <Content Include="Content\img\fabric1.png" />
+    <Content Include="Content\img\GreekKeyTile.png" />
     <Content Include="Content\img\headerbg.png" />
+    <Content Include="Content\img\LPillar.png" />
     <Content Include="Content\img\packages\IMG_0896.jpg" />
     <Content Include="Content\img\packages\IMG_0897.jpg" />
     <Content Include="Content\img\packages\IMG_0898.jpg" />
@@ -273,6 +276,7 @@
     <Content Include="Content\img\packages\IMG_0945.jpg" />
     <Content Include="Content\img\packages\IMG_0949.jpg" />
     <Content Include="Content\img\packages\IMG_0950.jpg" />
+    <Content Include="Content\img\RPillar.png" />
     <Content Include="Content\img\slider\IMG_0896.jpg" />
     <Content Include="Content\img\slider\IMG_0900.jpg" />
     <Content Include="Content\img\slider\IMG_0904.jpg" />
@@ -286,6 +290,7 @@
     <Content Include="Content\img\slider\IMG_0940.jpg" />
     <Content Include="Content\img\slider\IMG_0942.jpg" />
     <Content Include="Content\img\slider\IMG_0950.jpg" />
+    <Content Include="Content\img\whiteOne.png" />
     <Content Include="Content\site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />

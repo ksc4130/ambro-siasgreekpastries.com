@@ -36,8 +36,8 @@
 
 
     #slide1_container {
-        width: 500px;
-        height: 333px;
+        width: 250px;
+        /*height: 333px;*/
         overflow: hidden; /* So the sliding bit doesn't stick out. */
         margin: 0 auto;
         position: relative;
@@ -54,17 +54,20 @@
     }
 
         #slide1_images .img {
-            width: 500px;
-            height: 333px;
+            width: 250px;
+            /*height: 333px;*/
             background-size: contain;
             padding: 0;
             margin: 0;
+            
             float: left; /* All the images are in a row next to each other. */
         }
 
         #slide1_images img {
+            width: 250px;
             padding: 0;
             margin: 0;
+            margin-top: 77px;
             float: left; /* All the images are in a row next to each other. */
         }
 
@@ -87,22 +90,42 @@
         </div>-->
 
     <div class="row">
-        <div class="col-md-4">
+        <!--<div class="col-md-4">
             <div id="sl_container" class="shadow">
                 <figure>
                     <img class="img-responsive" ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" />
                 </figure>
             </div>
+        </div>-->
+        <div class="col-md-4">
+            <!--            border-color: #7a623c; border-width: 30px; border-radius: 10px; border-style: solid;-->
+            <div style="background-image: url('/Content/img/AmbroNavTile-BG.png'); height: 320px; width: 320px; background-size: cover;">
+                <div id="slide1_container">
+                    <div id="slide1_container" class="shadow">
+                        <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">
+                            <img class="img-responsive" ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" />
+                            <!--                        <div style="float: left;background-image: url({{img.imgUrl}}); height: 250px; width: 250px; background-size: contain;"></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-<!--        <div class="col-md-4">-->
-<!--            <div id="slide1_container" class="shadow">-->
-<!--                <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">-->
-<!--                    <img class="img-responsive" ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" />-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="col-md-4">-->
+        <!--            <div id="slide1_container" class="shadow">-->
+        <!--                <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">-->
+        <!--                    <img class="img-responsive" ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" />-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="col-md-4">-->
+        <!--            <div id="slide1_container" class="shadow">-->
+        <!--                <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">-->
+        <!--                    <img class="img-responsive" ng-repeat="img in imgs" ng-src="{{img.imgUrl}}" />-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
-    
+
     <!--<div class="row">
 
         <div id="slide1_container" class="shadow">
@@ -113,18 +136,14 @@
             </div>
         </div>
     </div>-->
-    
-    
     <!--    <div class="row">-->
-<!---->
-<!--        <div id="slide1_container" class="shadow">-->
-<!--            <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">-->
-<!--                <img class="img" ng-repeat="img in slideImgs" ng-src="{{img.imgUrl}}" />-->
-<!--            </div>-->
-<!--        </div>-->
+    <!---->
+    <!--        <div id="slide1_container" class="shadow">-->
+    <!--            <div id="slide1_images" ng-style="transStyle" style="transform: translateX(0px);">-->
+    <!--                <img class="img" ng-repeat="img in slideImgs" ng-src="{{img.imgUrl}}" />-->
+    <!--            </div>-->
+    <!--        </div>-->
     <!--    </div>-->
-    
-    
     <!--<div class="col-md-4">
         <div class="thumb-wrapper">
             <slider imgs="imgs" interval="3000" title="false" description="false" round="false"></slider>
@@ -136,5 +155,4 @@
     <div class="col-md-4">
         <slider imgs="imgs" interval="3000" title="false" thumbnail-class="'home-thumbnail'" description="false" round="false"></slider>
     </div>-->
-
 </div>

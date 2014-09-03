@@ -75,7 +75,7 @@
             //current.transStyle = current.getTransStyle();
             //$scope.transStyle = current.getTransStyle();
             $scope.transStyle = {
-                transform: 'translateX(' + (curIndex * -500) + 'px)',
+                transform: 'translateX(' + (curIndex * -250) + 'px)',
                 width: transWidth + 'px'
             };
             console.log('change', current.getTransStyle());
@@ -83,10 +83,10 @@
             prev.imgUrl = curIndex === total ? $scope.imgs[0].imgUrl : $scope.imgs[curIndex + 1].imgUrl;
 
             prev.style.opacity = 0;
-            prev.style.left = '500px';
+            prev.style.left = '250px';
 
             next.style.opacity = 1;
-            cur.style.left = '-500px';
+            cur.style.left = '-250px';
             next.style.left = '0px';
 
             var lastPrev = prev;
