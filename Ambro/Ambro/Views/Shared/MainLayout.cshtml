@@ -1,15 +1,29 @@
-﻿
-@{
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section nav
 {
-    <a ng-class="{active: active('assortments')}" href="#/assortments">Assortments</a>
-    <a ng-class="{active: active('pastries')}" href="#/pastries">Pastries</a>
-    <a ng-class ="{active: active('cookies')}" href="#/cookies">Cookies</a>
-    <a ng-class ="{active: active('catering')}" href="#/catering">Catering</a>
-    <a ng-class="{active: active('contact')}" href="#/contact">Request Information</a>&nbsp;
+    <li>
+        <a ng-class="{active: active('assortments')}" href="#/assortments">Assortments</a>
+    </li>
+    <li>
+        <a ng-class="{active: active('pastries')}" href="#/pastries">Pastries</a>
+    </li>
+    <li>
+        <a ng-class="{active: active('cookies')}" href="#/cookies">Cookies</a>
+    </li>
+    <li>
+        <a ng-class="{active: active('catering')}" href="#/catering">Catering</a>
+    </li>
+    <li>
+        <a ng-class="{active: active('contact')}" href="#/contact">Request Information</a>
+    </li>
+    @*    <a ng-class="{active: active('assortments')}" href="#/assortments">Assortments</a>*@
+    @*    <a ng-class="{active: active('pastries')}" href="#/pastries">Pastries</a>*@
+    @*    <a ng-class ="{active: active('cookies')}" href="#/cookies">Cookies</a>*@
+    @*    <a ng-class ="{active: active('catering')}" href="#/catering">Catering</a>*@
+    @*    <a ng-class="{active: active('contact')}" href="#/contact">Request Information</a>&nbsp;*@
 }
 
 @RenderBody()

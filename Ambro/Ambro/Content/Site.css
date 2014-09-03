@@ -19,9 +19,14 @@
     width: 400px; 
 }
 
+.inner-bg {
+    background-color: #c59c71;
+}
+
 .main-bg {
     /*background-color: #E1C69D;*/
-    background-color: #efe1cc;
+    /*background-color: #efe1cc;*/
+    background-color: #3b291d;
     /*background-color: #DFD8BD;
     background-image: url('img/bg/Parthenon.jpg');*/
     -ms-background-size: cover;

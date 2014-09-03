@@ -222,6 +222,7 @@
     <Content Include="Content\img\bg\Parthenon.jpg" />
     <Content Include="Content\img\cookie-bag-sm.png" />
     <Content Include="Content\img\cookie-bag.jpg" />
+    <Content Include="Content\img\CookieTile.jpg" />
     <Content Include="Content\img\fabric1.png" />
     <Content Include="Content\img\GreekKeyTile.png" />
     <Content Include="Content\img\headerbg.png" />
@@ -276,7 +277,9 @@
     <Content Include="Content\img\packages\IMG_0945.jpg" />
     <Content Include="Content\img\packages\IMG_0949.jpg" />
     <Content Include="Content\img\packages\IMG_0950.jpg" />
+    <Content Include="Content\img\PastryTile.jpg" />
     <Content Include="Content\img\RPillar.png" />
+    <Content Include="Content\img\SeasonalTile.jpg" />
     <Content Include="Content\img\slider\IMG_0896.jpg" />
     <Content Include="Content\img\slider\IMG_0900.jpg" />
     <Content Include="Content\img\slider\IMG_0904.jpg" />
