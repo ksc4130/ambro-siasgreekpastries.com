@@ -3,7 +3,7 @@
 
     config.$inject = ['$routeProvider', '$locationProvider'];
     function config($routeProvider, $locationProvider) {
-        $locationProvider.html5Mode(true);
+        
         $routeProvider.otherwise('/')
             .when('/', {
                 templateUrl: '/app/tmpls/home.html',
@@ -82,6 +82,8 @@
                     }]
                 }
             });
+
+        $locationProvider.html5Mode(true);
     }
 
     ambro.config(config);
