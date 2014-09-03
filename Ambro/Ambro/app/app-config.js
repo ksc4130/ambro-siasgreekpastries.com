@@ -1,8 +1,9 @@
 ﻿(function () {
     'use strict';
 
-    config.$inject = ['$routeProvider'];
-    function config($routeProvider) {
+    config.$inject = ['$routeProvider', '$locationProvider'];
+    function config($routeProvider, $locationProvider) {
+        $locationProvider.html5Mode(true);
         $routeProvider.otherwise('/')
             .when('/', {
                 templateUrl: '/app/tmpls/home.html',
