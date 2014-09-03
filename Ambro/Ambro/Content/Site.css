@@ -152,3 +152,16 @@ div.items-table table thead tr th {
     background-color: #422819;
     color: #fff;
 }
+.navbar-inverse {
+    /*background-color: #4C3B31;*/
+    background-color: #3B291D;
+}
+.navbar-nav {
+    font-size: 1.2em;
+}
+.navbar-nav li a {
+    color: #c59c80 !important;
+}
+.navbar-nav li a:hover {
+    color: #FFF !important;
+}
