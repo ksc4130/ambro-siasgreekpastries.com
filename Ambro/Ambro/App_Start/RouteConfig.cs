@@ -13,6 +13,13 @@ namespace Ambro
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Route override to work with Angularjs and HTML5 routing
+            routes.MapRoute(
+                name: "Application1Override",
+                url: "{.}",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
