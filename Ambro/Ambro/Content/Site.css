@@ -78,6 +78,9 @@
 .text-blue {
     color: #428bca;
 }
+.text-underline {
+    text-decoration: underline;
+}
 .text-sm {
     font-size: .75em;
 }
