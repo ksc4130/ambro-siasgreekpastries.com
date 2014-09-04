@@ -18,7 +18,8 @@
                 templateUrl: '/app/tmpls/contact.html'
             })
             .when('/catering', {
-                templateUrl: '/app/tmpls/catering.html'
+                templateUrl: '/app/tmpls/catering.html',
+                controller: 'cateringCtrl'
             })
             .when('/favors', {
                 templateUrl: '/app/tmpls/favors.html'
