@@ -263,6 +263,7 @@
     <Content Include="Content\img\GreekKeyTile.png" />
     <Content Include="Content\img\headerbg.png" />
     <Content Include="Content\img\LPillar.png" />
+    <Content Include="Content\img\LPillarFin.png" />
     <Content Include="Content\img\packages\IMG_0896.jpg" />
     <Content Include="Content\img\packages\IMG_0897.jpg" />
     <Content Include="Content\img\packages\IMG_0898.jpg" />
@@ -315,6 +316,7 @@
     <Content Include="Content\img\packages\IMG_0950.jpg" />
     <Content Include="Content\img\PastryTile.jpg" />
     <Content Include="Content\img\RPillar.png" />
+    <Content Include="Content\img\RPillarFin.png" />
     <Content Include="Content\img\SeasonalTile.jpg" />
     <Content Include="Content\img\slider\IMG_0896.jpg" />
     <Content Include="Content\img\slider\IMG_0900.jpg" />

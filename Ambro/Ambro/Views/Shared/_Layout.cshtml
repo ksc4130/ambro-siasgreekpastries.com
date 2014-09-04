@@ -15,12 +15,12 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    
+
                 </button>
                 <a class="navbar-brand" href="/">
 @*                    <span class="visible-xs text-light">Ambro-sia's</span>*@
@@ -29,7 +29,7 @@
                     </div>
                 </a>
             </div>
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="nav navbar-nav">
                     @RenderSection("nav")
                 </ul>
@@ -38,8 +38,8 @@
     </nav>
 
     <div style="min-height: 100%; position: fixed; left: 0; top: 0; bottom: 0; right: 0;" class="container inner-bg">
-        <img class="hidden-sm hidden-xs" src="/Content/img/LPillar.png" style="position: absolute; top:51px; bottom: 0; left: -90px; z-index: 9000;" />
-        <img class="hidden-sm hidden-xs" src="/Content/img/RPillar.png" style="position: absolute; top:51px; bottom: 0; right: -80px; z-index: 9000;" />
+        <img class="hidden-sm hidden-xs" src="/Content/img/LPillarFin.png" style="position: absolute; top:51px; bottom: 0; left: -90px; z-index: 9000;" />
+        <img class="hidden-sm hidden-xs" src="/Content/img/RPillarFin.png" style="position: absolute; top:51px; bottom: 0; right: -80px; z-index: 9000;" />
 
         <div style="overflow-y: scroll; overflow-x: auto;  max-height: 100%;">
 @*            <div style="height: 400px; margin-top:51px; width: 100%; background-image: url('/Content/img/catering/Baklava.jpg');  *@
@@ -58,6 +58,7 @@
 
 
     <script src="/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
     <script src="/Scripts/angular.js"></script>
     <script src="/Scripts/angular-resource.js"></script>
     <script src="/Scripts/angular-route.js"></script>
@@ -69,8 +70,8 @@
     <script src="/Scripts/angular-strap.js"></script>
     <script src="/Scripts/angular-strap.tpl.js"></script>
 
-    @*    <script src="/Scripts/angular-ui/ui-bootstrap.js"></script>*@
-    @*    <script src="/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>*@
+@*        <script src="/Scripts/angular-ui/ui-bootstrap.js"></script>*@
+@*        <script src="/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>*@
 
     <script src="/app/app.js"></script>
 
