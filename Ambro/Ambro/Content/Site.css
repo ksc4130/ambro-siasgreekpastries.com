@@ -191,3 +191,8 @@ div.items-table table thead tr th {
 .navbar-nav li a:hover {
     color: #FFF !important;
 }
+.testimonial {
+    border-bottom: 1px white solid;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
