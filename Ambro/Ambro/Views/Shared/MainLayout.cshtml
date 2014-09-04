@@ -4,24 +4,32 @@
 
 @section nav
 {
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <a ng-class="{active: active('assortments')}" href="/assortments">Assortments</a>
+            </li>
+            <li>
+                <a ng-class="{active: active('pastries')}" href="/pastries">Pastries</a>
+            </li>
+            <li>
+                <a ng-class="{active: active('cookies')}" href="/cookies">Cookies</a>
+            </li>
+            <li>
+                <a ng-class="{active: active('cookies')}" href="/seasonal">Seasonal</a>
+            </li>
+        </ul>
     <li>
-        <a ng-class="{active: active('assortments')}" href="/assortments">Assortments</a>
-    </li>
-    <li>
-        <a ng-class="{active: active('pastries')}" href="/pastries">Pastries</a>
-    </li>
-    <li>
-        <a ng-class="{active: active('cookies')}" href="/cookies">Cookies</a>
-    </li>
     <li>
         <a ng-class="{active: active('catering')}" href="/catering">Catering</a>
     </li>
     <li>
         <a ng-class="{active: active('favors')}" href="/favors">Favors</a>
     </li>
-<li>
-    <a ng-class="{active: active('about')}" href="/about">About Us</a>
-</li>
+    <li>
+        <a ng-class="{active: active('about')}" href="/about">About Us</a>
+    </li>
     <li>
         <a ng-class="{active: active('testimonials')}" href="/testimonials">Testimonials</a>
     </li>
