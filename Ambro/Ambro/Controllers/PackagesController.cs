@@ -64,7 +64,15 @@ namespace Ambro.Controllers
                             string.Compare(x.Product.Category.CategoryName, "assortment",
                                 StringComparison.OrdinalIgnoreCase) == 0));
         }
-
+        [Route("api/packages/getSeasonal")]
+        public IHttpActionResult GetSeasonal()
+        {
+            var packages = _packages.FindAll().ToList();
+            return Ok(packages
+                    .Where(x => x.Product.Category != null &&
+                            string.Compare(x.Product.Category.CategoryName, "seasonal",
+                                StringComparison.OrdinalIgnoreCase) == 0));
+        }
         public IHttpActionResult Get(string packageId)
         {
             return Ok(_packages.FindOneById(new ObjectId(packageId)));

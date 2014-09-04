@@ -25,7 +25,9 @@
         self.getAssortments = function () {
             return apiSrv.package.getAssortments().$promise;
         };
-
+        self.getSeasonal = function () {
+            return apiSrv.package.getSeasonal().$promise;
+        };
         self.getPackageById = function(packageId) {
             return apiSrv.package.get({packageId: packageId}).$promise;
         };
