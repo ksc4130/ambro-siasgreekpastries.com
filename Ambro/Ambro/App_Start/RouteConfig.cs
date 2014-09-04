@@ -21,8 +21,8 @@ namespace Ambro
             // Route override to work with Angularjs and HTML5 routing
             routes.MapRoute(
                 name: "Application1Override",
-                url: "{url}",
-                defaults: new { controller = "Home", action = "Index" }
+                url: "{url}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
