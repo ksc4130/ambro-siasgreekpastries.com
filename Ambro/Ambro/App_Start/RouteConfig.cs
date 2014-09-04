@@ -15,13 +15,13 @@ namespace Ambro
 
             routes.MapRoute(
                 name: "Admin",
-                url: "{admin}",
+                url: "admin/{action}",
                 defaults: new { controller = "Admin", action = "Index" }
             );
             // Route override to work with Angularjs and HTML5 routing
             routes.MapRoute(
                 name: "Application1Override",
-                url: "{.}",
+                url: "{url}",
                 defaults: new { controller = "Home", action = "Index" }
             );
 

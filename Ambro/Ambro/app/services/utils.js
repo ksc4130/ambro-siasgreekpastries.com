@@ -19,7 +19,7 @@
             if ($scope) {
                 $scope.$on("$destroy", function () {
                     if (inter) {
-                        $interval.cancel(timer);
+                        $interval.cancel(inter);
                     }
                 });
             }

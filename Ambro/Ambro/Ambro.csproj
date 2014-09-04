@@ -180,6 +180,7 @@
     <Content Include="app\app-config.js" />
     <Content Include="app\app.js" />
     <Content Include="app\controllers\cateringCtrl.js" />
+    <Content Include="app\controllers\favorsCtrl.js" />
     <Content Include="app\controllers\headerCtrl.js" />
     <Content Include="app\controllers\homeCtrl.js" />
     <Content Include="app\controllers\manageProductsCtrl.js" />

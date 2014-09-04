@@ -6,15 +6,15 @@
 
         $routeProvider.otherwise('/')
             .when('/', {
-                templateUrl: '/app/tmpls/home.html',
-                controller: 'homeCtrl',
-                resolve: {
-                    packages: [
-                        'packageSrv', function(packageSrv) {
-                            return packageSrv.getPackages();
-                        }
-                    ]
-                }
+                templateUrl: '/app/tmpls/home.html'//,
+//                controller: 'homeCtrl',
+//                resolve: {
+//                    packages: [
+//                        'packageSrv', function(packageSrv) {
+//                            return packageSrv.getPackages();
+//                        }
+//                    ]
+//                }
             })
             .when('/contact', {
                 templateUrl: '/app/tmpls/contact.html'
@@ -25,10 +25,7 @@
             })
             .when('/favors', {
                 templateUrl: '/app/tmpls/favors.html',
-                controller: 'homeCtrl',
-                resolve: {
-                    packages: function() { return []; }
-                }
+                controller: 'favorsCtrl'
             })
             .when('/testimonials', {
                 templateUrl: '/app/tmpls/testimonials.html'
