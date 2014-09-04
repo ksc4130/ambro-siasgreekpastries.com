@@ -190,6 +190,7 @@
     <Content Include="app\services\productSrv.js" />
     <Content Include="app\tmpls\catering.html" />
     <Content Include="app\tmpls\contact.html" />
+    <Content Include="app\tmpls\favors.html" />
     <Content Include="app\tmpls\home.html" />
     <Content Include="app\tmpls\homeO.html" />
     <Content Include="app\tmpls\manageProducts.html" />
