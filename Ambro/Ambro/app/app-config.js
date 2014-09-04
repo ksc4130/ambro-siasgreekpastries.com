@@ -4,17 +4,22 @@
     config.$inject = ['$routeProvider', '$locationProvider'];
     function config($routeProvider, $locationProvider) {
 
-        $routeProvider.otherwise('/')
+        $routeProvider.otherwise({
+                redirectTo: '/'
+            })
+            .when('/oops', {
+                templateUrl: '/app/tmpls/oops.html'
+            })
             .when('/', {
                 templateUrl: '/app/tmpls/home.html'//,
-//                controller: 'homeCtrl',
-//                resolve: {
-//                    packages: [
-//                        'packageSrv', function(packageSrv) {
-//                            return packageSrv.getPackages();
-//                        }
-//                    ]
-//                }
+                //                controller: 'homeCtrl',
+                //                resolve: {
+                //                    packages: [
+                //                        'packageSrv', function(packageSrv) {
+                //                            return packageSrv.getPackages();
+                //                        }
+                //                    ]
+                //                }
             })
             .when('/contact', {
                 templateUrl: '/app/tmpls/contact.html'
