@@ -20,6 +20,12 @@
             .when('/catering', {
                 templateUrl: '/app/tmpls/catering.html'
             })
+            .when('/favors', {
+                templateUrl: '/app/tmpls/favors.html'
+            })
+            .when('/testimonials', {
+                templateUrl: '/app/tmpls/testimonials.html'
+            })
             .when('/products', {
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',
