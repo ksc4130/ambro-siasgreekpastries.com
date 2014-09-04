@@ -237,14 +237,6 @@
     <Content Include="Content\img\catering\Melomakarona 16-in tray.JPG" />
     <Content Include="Content\img\catering\Melomakarona not wrapped.jpg" />
     <Content Include="Content\img\catering\Memomanarona .JPG" />
-<<<<<<< HEAD
-    <Content Include="Content\img\catering\Paximadia Assorted.JPG" />
-=======
-    <Content Include="Content\img\catering\Paximadia Almondlemon.jpg" />
-    <Content Include="Content\img\catering\Paximadia Almondlemon2.jpg" />
-    <Content Include="Content\img\catering\Paximadia Assorted.JPG" />
-    <Content Include="Content\img\catering\Paximadia CranberryOrange.jpg" />
->>>>>>> ea1339cabbc1253e2c4bfa4c03c9577400c0c6b0
     <Content Include="Content\img\cookie-bag-sm.png" />
     <Content Include="Content\img\cookie-bag.jpg" />
     <Content Include="Content\img\CookieTile.jpg" />
