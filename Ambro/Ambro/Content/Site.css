@@ -10,6 +10,26 @@
     top: 50px;
 }*/
 
+.slider-wrapper {
+        position: relative;
+        width: 500px;
+        height: 333px;
+        margin: 0 auto; 
+}
+
+.slider-wrapper img {
+            position: absolute;
+            left: 0;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+        }
+
+            .slider-wrapper img.transparent {
+                opacity: 0;
+            }
+
 .top-logo {
     position: fixed;
     top: -75px;

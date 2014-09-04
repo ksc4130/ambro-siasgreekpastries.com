@@ -25,11 +25,6 @@
             };
         });
 
-        $scope.cateringImgs = [
-            { imgUrl: '/Content/img/catering/Baklava 12x 18 tray.jpg' },
-            { imgUrl: '/Content/img/catering/Baklava.jpg' }
-        ];
-
         $scope.slideImgs = [packages[0]];
 
 //        var transWidth = $scope.imgs.length * 500;

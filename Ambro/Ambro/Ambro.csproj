@@ -179,6 +179,7 @@
     <Content Include="app\admin-config.js" />
     <Content Include="app\app-config.js" />
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\cateringCtrl.js" />
     <Content Include="app\controllers\headerCtrl.js" />
     <Content Include="app\controllers\homeCtrl.js" />
     <Content Include="app\controllers\manageProductsCtrl.js" />
@@ -191,14 +192,12 @@
     <Content Include="app\tmpls\about.html" />
     <Content Include="app\tmpls\catering.html" />
     <Content Include="app\tmpls\contact.html" />
-    <Content Include="app\tmpls\favors.html" />
     <Content Include="app\tmpls\home.html" />
     <Content Include="app\tmpls\homeO.html" />
     <Content Include="app\tmpls\manageProducts.html" />
     <Content Include="app\tmpls\product.html" />
     <Content Include="app\tmpls\products.html" />
     <Content Include="app\tmpls\sliderDrc.html" />
-    <Content Include="app\tmpls\testimonials.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\angular-motion.min.css" />
     <Content Include="Content\bootstrap-datepicker.css" />
@@ -240,6 +239,7 @@
     <Content Include="Content\img\catering\Melomakarona 16-in tray.JPG" />
     <Content Include="Content\img\catering\Melomakarona not wrapped.jpg" />
     <Content Include="Content\img\catering\Memomanarona .JPG" />
+    <Content Include="Content\img\catering\Paximadia Assorted.JPG" />
     <Content Include="Content\img\cookie-bag-sm.png" />
     <Content Include="Content\img\cookie-bag.jpg" />
     <Content Include="Content\img\CookieTile.jpg" />
