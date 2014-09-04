@@ -188,6 +188,7 @@
     <Content Include="app\services\apiSrv.js" />
     <Content Include="app\services\packageSrv.js" />
     <Content Include="app\services\productSrv.js" />
+    <Content Include="app\tmpls\about.html" />
     <Content Include="app\tmpls\catering.html" />
     <Content Include="app\tmpls\contact.html" />
     <Content Include="app\tmpls\favors.html" />
