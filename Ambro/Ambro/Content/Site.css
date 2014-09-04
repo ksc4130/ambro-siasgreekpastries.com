@@ -196,3 +196,6 @@ div.items-table table thead tr th {
     padding-bottom: 0;
     margin-bottom: 5px;
 }
+.img-fix-height {
+    max-height: 275px;
+}

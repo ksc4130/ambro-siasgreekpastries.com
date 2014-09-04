@@ -14,7 +14,6 @@
 
             var inter = $interval(function () {
                 curIndex = (curIndex < len) ? (curIndex + 1) : 0;
-                console.log(curIndex);
             }, duration);
 
             if ($scope) {

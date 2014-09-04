@@ -3,15 +3,17 @@
 
     config.$inject = ['$routeProvider', '$locationProvider'];
     function config($routeProvider, $locationProvider) {
-        
+
         $routeProvider.otherwise('/')
             .when('/', {
                 templateUrl: '/app/tmpls/home.html',
                 controller: 'homeCtrl',
                 resolve: {
-                    packages: ['packageSrv', function(packageSrv) {
-                        return packageSrv.getPackages();
-                    }]
+                    packages: [
+                        'packageSrv', function(packageSrv) {
+                            return packageSrv.getPackages();
+                        }
+                    ]
                 }
             })
             .when('/contact', {
@@ -22,7 +24,11 @@
                 controller: 'cateringCtrl'
             })
             .when('/favors', {
-                templateUrl: '/app/tmpls/favors.html'
+                templateUrl: '/app/tmpls/favors.html',
+                controller: 'homeCtrl',
+                resolve: {
+                    packages: function() { return []; }
+                }
             })
             .when('/testimonials', {
                 templateUrl: '/app/tmpls/testimonials.html'

@@ -1,9 +1,9 @@
 ﻿(function () {
     'use strict';
 
-    homeCtrl.$inject = ['$scope', 'packages', '$interval'];
+    homeCtrl.$inject = ['$scope', 'packages', '$interval', 'utils'];
     ambro.controller('homeCtrl', homeCtrl);
-    function homeCtrl($scope, packages, $interval) {
+    function homeCtrl($scope, packages, $interval, utils) {
         $scope.imgs = packages.map(function (item) { //.splice(0, 5)
             return {
                 title: item.product.productName,
@@ -27,6 +27,21 @@
 
         $scope.slideImgs = [packages[0]];
 
+        var favorImgs = [
+            { imgUrl: '/Content/img/favors/Baby Shower Favor3-Piece Paximadia.jpg' },
+            { imgUrl: '/Content/img/favors/Chcolate dipped Paximadia2.jpg' },
+            //{ imgUrl: '/Content/img/favors/Chocolate dipped Paximadia.jpg' },
+            //{ imgUrl: '/Content/img/favors/Chocolate dipped Paximadia3.jpg' },
+            { imgUrl: '/Content/img/favors/Graduatin favor front only2.jpg' },
+            { imgUrl: '/Content/img/favors/Graduation favor front only.jpg' },
+            //{ imgUrl: '/Content/img/favors/Graduation favor showing chocolate covered baklava.jpg' },
+            { imgUrl: '/Content/img/favors/Graduation favor with Kourambie.jpg' },
+            { imgUrl: '/Content/img/favors/IMG_3770.jpg' },
+            { imgUrl: '/Content/img/favors/WeddingAnniversaryfavor chocolate-covered baklava.jpg' },
+            { imgUrl: '/Content/img/favors/White chocolat dipped paximadia.jpg' }
+        ];
+        var iter = utils.iter(favorImgs, $scope, 2000);
+        $scope.img = iter.value;
 //        var transWidth = $scope.imgs.length * 500;
 //        $scope.transStyle = {
 //            width: transWidth + 'px'
