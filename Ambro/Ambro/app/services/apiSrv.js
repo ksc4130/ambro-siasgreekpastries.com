@@ -7,7 +7,7 @@
     function apiSrv($resource, apiUrlBase) {
         function createApi(url, extMethods) {
             if (!url || !url.length) {
-                console.error('must provider url to create api');
+                console.error('must provide url to create api');
                 return null;
             }
 
@@ -27,6 +27,7 @@
             getPastries: { method: 'GET', isArray: true, params: { action: 'getPastries' } }
             , getCookies: { method: 'GET', isArray: true, params: { action: 'getCookies' } }
             , getAssortments: { method: 'GET', isArray: true, params: { action: 'getAssortments' } }
+            , getSeasonal: { method: 'GET', isArray: true, params: { action: 'getSeasonal' } }
         });
 
         return self;
