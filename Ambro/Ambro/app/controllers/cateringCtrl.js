@@ -25,7 +25,8 @@
             //{ imgUrl: '/Content/img/catering/Paximadia Assorted.jpg' }//14
         ];
 
-        $scope.img = utils.iter(cateringImgs, $scope, 1500);
+        var iter = utils.iter(cateringImgs, $scope, 1500);
+        $scope.img = iter.value;
 
         
         

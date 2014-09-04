@@ -7,13 +7,13 @@
         var self = {};
 
         self.iter = function (arr, $scope, duration) {
-            var curIndex = null,
+            var curIndex = 0,
                 len = arr.length - 1;
 
             duration = duration || 1000;
 
             var inter = $interval(function () {
-                curIndex = curIndex == null ? 0 : (curIndex < len) ? (curIndex + 1) : 0;
+                curIndex = (curIndex < len) ? (curIndex + 1) : 0;
                 console.log(curIndex);
             }, duration);
 
@@ -25,8 +25,17 @@
                 });
             }
 
-            return function () {
-                return arr[curIndex || 0];
+            var val = function() {
+                return arr[curIndex];
+            };
+
+            var ind = function() {
+                return curIndex;
+            };
+
+            return {
+                index: ind,
+                value: val
             };
         };
 
