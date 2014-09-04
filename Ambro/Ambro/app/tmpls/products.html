@@ -1,7 +1,7 @@
 ﻿<div class="row">
     <div class="col-md-12">
         <div ng-repeat="package in packages" class="col-md-3">
-            <a style="text-decoration: none;" href="#/product/{{package.id}}">
+            <a style="text-decoration: none;" href="/product/{{package.id}}">
                 <img class="img-responsive img-thumbnail" ng-src="{{package.imgUrl}}" alt="...">
                 <h4 class="text-darker text-center">{{package.product.productName}}</h4>
                 <h5 class="text-dark text-center">{{package.packageName | limitTo:20}} <dots value="package.packageName" limit="20"></dots> <small class="text-muted"></small></h5>
