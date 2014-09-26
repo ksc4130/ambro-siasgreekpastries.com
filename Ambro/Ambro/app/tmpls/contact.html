@@ -15,20 +15,18 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <form role="form">
+                        <form ng-submit="contact(con)" role="form">
                             <div class="form-group">
-                                <input class="form-control" placeholder="First Name">
+                                <input ng-model="con.fullName" type="text"  class="form-control" placeholder="Full Name">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Last Name">
+                                <input required ng-model="con.email" type="email" class="form-control" placeholder="Email Address">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Email Address">
+                                <textarea ng-model="con.body" style="width: 100%; height: 100px;" class="form-control" placeholder="How can we help you?"></textarea><br />
+                                
                             </div>
-                            <div class="form-group">
-                                <textarea style="width: 100%; height: 100px;" class="form-control" placeholder="How can we help you?"></textarea><br />
-                                <button class="btn btn-default pull-right"><i class="fa fa-send"></i> Send</button>
-                            </div>
+                            <button type="submit" class="btn btn-default pull-right"><i class="fa fa-send"></i> Send</button>
                         </form>
                     </div>
                 </div>

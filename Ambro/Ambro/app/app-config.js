@@ -22,7 +22,8 @@
                 //                }
             })
             .when('/contact', {
-                templateUrl: '/app/tmpls/contact.html'
+                templateUrl: '/app/tmpls/contact.html',
+                controller: 'contactCtrl'
             })
             .when('/catering', {
                 templateUrl: '/app/tmpls/catering.html',
