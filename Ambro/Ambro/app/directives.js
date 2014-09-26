@@ -30,22 +30,22 @@
                         r = '-20px';
                     } else if (h < 650) {
                         l = '-50px';
-                        r = '-40px';
+                        r = '-50px';
                     } else if (h < 700) {
                         l = '-60px';
-                        r = '-50px';
+                        r = '-60px';
                     } else if (h < 750) {
                         l = '-70px';
-                        r = '-60px';
+                        r = '-70px';
                     } else if (h < 850) {
                         l = '-70px';
-                        r = '-60px';
+                        r = '-70px';
                     } else if (h < 950) {
                         l = '-60px';
-                        r = '-50px';
+                        r = '-60px';
                     } else if (h < 1050) {
                         l = '-70px';
-                        r = '-60px';
+                        r = '-70px';
                     } else {
                         l = '-90px';
                         r = '-80px';
