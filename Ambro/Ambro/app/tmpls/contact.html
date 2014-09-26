@@ -15,19 +15,19 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 text-white">
-                        <h3 ng-if="con.isSending" >Sending...</h3>
-                        <h3 ng-if="con.sent" >Thank you for your input.</h3>
+                        <h3 class="text-center" ng-if="con.isSending" >Sending...</h3>
+                        <h3 ng-if="con.sent" ><i class="fa fa-check text-blue text-center"></i> Thank you for taking the time to contact us.</h3>
                         <form ng-hide="con.isSending || con.sent" ng-submit="contact(con)" role="form">
                             <div ng-if="con.error" class="alert alert-danger">There was a problem processing your request.</div>
                             
                             <div class="form-group">
-                                <input ng-model="con.fullName" type="text" class="form-control" placeholder="Full Name">
+                                <input required ng-model="con.fullName" type="text" class="form-control" placeholder="Full Name">
                             </div>
                             <div class="form-group">
                                 <input required ng-model="con.email" type="email" class="form-control" placeholder="Email Address">
                             </div>
                             <div class="form-group">
-                                <textarea ng-model="con.body" style="width: 100%; height: 100px;" class="form-control" placeholder="How can we help you?"></textarea><br />
+                                <textarea required ng-model="con.body" style="width: 100%; height: 100px;" class="form-control" placeholder="How can we help you?"></textarea><br />
 
                             </div>
                             <button ng-disabled="isSending" type="submit" class="btn btn-default pull-right"><i class="fa fa-send"></i> Send</button>
