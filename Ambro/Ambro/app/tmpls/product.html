@@ -1,10 +1,17 @@
 ﻿
-<div class="row">
+<div class="row text-white">
     <div class="col-md-6">
         <img class="img-responsive img-thumbnail" src="{{package.imgUrl}}" alt="...">
     </div>
     <div class="col-md-6 text-white">
         <h2 class="text-darker">{{package.product.productName}}</h2>
+
+        <p class="text-md">
+            {{package.product.productDescription}}
+        </p><h3 style="margin-top: 40px; margin-bottom: 40px;" class="text-blue">{{package.price | currency}}</h3>
+
+    </div>
+    <div class="col-md-6">
         <h4 ng-if="package.size && package.size.length">Package Size: {{package.size}}</h4>
         <h4>Container: {{package.packageName}}</h4>
         <h4 ng-if="package.containerSize && package.containerSize.length">Container Dimensions: {{package.containerSize}}</h4>
@@ -12,9 +19,11 @@
         <h4 ng-if="package.pieceSize && package.pieceSize.length">Piece Size: {{package.pieceSize}}</h4>
         <h4 ng-if="package.containerDescription && package.containerDescription.length">{{package.containerDescription}}</h4>
         <h4 ng-if="package.netWeightPounds && package.netWeightPounds.length">Net Weight: {{package.netWeightPounds}}</h4>
+    </div>
+    <div ng-if="package.product.ingredients" class="col-md-6">
+        <h4>Ingredients:</h4>
         <p class="text-md">
-            {{package.product.productDescription}}
+            {{package.product.ingredients}}
         </p>
-        <h3 style="margin-top: 40px; margin-bottom: 40px;" class="text-blue">{{package.price | currency}}</h3>
     </div>
 </div>

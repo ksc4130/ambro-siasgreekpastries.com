@@ -38,9 +38,9 @@
     </nav>
     
     
-    <div style="min-height: 100%; position: fixed; left: 0; top: 51px; bottom: 0; right: 0;" class="container inner-bg">
-        <img class="hidden-xs" src="/Content/img/LPillarFin.png" style="position: absolute; top: 0; bottom: 0; left: -90px; z-index: 9000;" />
-        <img class="hidden-xs" src="/Content/img/RPillarFin.png" style="position: absolute; top: 0; bottom: 0; right: -80px; z-index: 9000;" />
+    <div style=" position: fixed; left: 0; top: 51px; bottom: 0; right: 0;" class="container inner-bg">
+        <img fill-height class="hidden-xs" src="/Content/img/LPillarFin.png" style="position: absolute; top: 0; bottom: 0; left: -90px; min-height: 90%; z-index: 9000;" />
+        <img fill-height class="hidden-xs" src="/Content/img/RPillarFin.png" style="position: absolute; top: 0; bottom: 0; right: -80px; min-height: 90%; z-index: 9000;" />
 
         <div style="overflow-y: scroll; overflow-x: auto;  max-height: 100%;">
 @*            <div style="height: 400px; margin-top:51px; width: 100%; background-image: url('/Content/img/catering/Baklava.jpg');  *@
@@ -52,7 +52,7 @@
                 </div>
             </div>
 
-            <div style="margin-top: 20px; margin-bottom: 75px; margin-right: 25px; margin-left: 25px;">
+            <div style="margin-top: 20px; margin-bottom: 75px; margin-right: 25px; margin-left: 25px; padding-left: 20px; padding-right: 20px;">
                 @RenderBody()
             </div>
         </div>

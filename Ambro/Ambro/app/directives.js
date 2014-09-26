@@ -1,6 +1,69 @@
 ﻿(function () {
     'use strict';
 
+    ambro.directive('fillHeight', ['$window', function ($window) {
+        return {
+            link: function (scope, el, attrs, ctrl) {
+                var p = el.parent();
+
+                setCss();
+
+                el.height(p.height());
+                angular.element(window).bind('resize', setCss);
+
+
+                function setCss() {
+                    var h = p.height(),
+                        pos = el.position(),
+                        css = { height: h },
+                        l,
+                        r;
+
+                    if (h < 300) {
+                        l = '-8px';
+                        r = '-8px';
+                    } else if (h < 400) {
+                        l = '-15px';
+                        r = '-15px';
+                    } else if (h < 500) {
+                        l = '-20px';
+                        r = '-20px';
+                    } else if (h < 650) {
+                        l = '-50px';
+                        r = '-40px';
+                    } else if (h < 700) {
+                        l = '-60px';
+                        r = '-50px';
+                    } else if (h < 750) {
+                        l = '-70px';
+                        r = '-60px';
+                    } else if (h < 850) {
+                        l = '-70px';
+                        r = '-60px';
+                    } else if (h < 950) {
+                        l = '-60px';
+                        r = '-50px';
+                    } else if (h < 1050) {
+                        l = '-70px';
+                        r = '-60px';
+                    } else {
+                        l = '-90px';
+                        r = '-80px';
+                    }
+
+
+                    if (pos.left < 0) {
+                        css['left'] = l;
+                    } else {
+                        css['right'] = r;
+                    }
+                    el.css(css);
+                }
+
+            }
+        }
+    }]);
+
     ambro.directive('dots', dots);
     function dots() {
         return {
@@ -21,7 +84,7 @@
     changer.$inject = [];
     ambro.directive('changer', changer);
     function changer() {
-        
+
     }
 
     slider.$inject = ['$interval'];
@@ -61,7 +124,7 @@
                     $scope.round = true;
                 }
 
-                $scope.imgs.forEach(function(item) {
+                $scope.imgs.forEach(function (item) {
                     item.sliderClass = $scope.inClass;//'am-fade';//'am-slide-right';
                 });
 
