@@ -197,6 +197,7 @@
     <Content Include="app\tmpls\catering.html" />
     <Content Include="app\tmpls\contact.html" />
     <Content Include="app\tmpls\favors.html" />
+    <Content Include="app\tmpls\find.html" />
     <Content Include="app\tmpls\home.html" />
     <Content Include="app\tmpls\homeO.html" />
     <Content Include="app\tmpls\manageProducts.html" />
@@ -229,6 +230,7 @@
     <Content Include="Content\img\Ambro-Sias_Logo.png" />
     <Content Include="Content\img\AmbroNavTile-BG.png" />
     <Content Include="Content\img\bg\Parthenon.jpg" />
+    <Content Include="Content\img\CAPITOLCUPLOGO.jpg" />
     <Content Include="Content\img\catering\Baklava 12x 18 tray.jpg" />
     <Content Include="Content\img\catering\Baklava.jpg" />
     <Content Include="Content\img\catering\Dessert table 3.JPG" />

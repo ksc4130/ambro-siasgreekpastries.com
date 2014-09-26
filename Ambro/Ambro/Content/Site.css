@@ -10,7 +10,9 @@
     top: 50px;
 }*/
 
-
+::-webkit-scrollbar { 
+    display: none; 
+}
 .slider-wrapper {
         position: relative;
         width: 500px;
