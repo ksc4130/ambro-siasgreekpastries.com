@@ -12,6 +12,7 @@ html {
 }
 body {
   margin: 0;
+  overflow-y:hidden;
 }
 article,
 aside,

@@ -38,6 +38,9 @@
             .when('/about', {
                 templateUrl: '/app/tmpls/about.html'
             })
+            .when('/find', {
+                templateUrl: '/app/tmpls/find.html'
+            })
             .when('/products', {
                 templateUrl: '/app/tmpls/products.html',
                 controller: 'productsCtrl',
