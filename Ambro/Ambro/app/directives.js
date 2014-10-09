@@ -38,14 +38,14 @@
                         l = '-70px';
                         r = '-70px';
                     } else if (h < 850) {
-                        l = '-70px';
-                        r = '-70px';
+                        l = '-80px';
+                        r = '-80px';
                     } else if (h < 950) {
-                        l = '-60px';
-                        r = '-60px';
+                        l = '-90px';
+                        r = '-90px';
                     } else if (h < 1050) {
-                        l = '-70px';
-                        r = '-70px';
+                        l = '-100px';
+                        r = '-100px';
                     } else {
                         l = '-90px';
                         r = '-80px';

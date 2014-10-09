@@ -10,7 +10,6 @@ using System.Web.Http;
 using Ambro.Models;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.Builders;
 using Newtonsoft.Json;
 
 namespace Ambro.Controllers
@@ -21,6 +20,7 @@ namespace Ambro.Controllers
         private MongoServer _server;
         private MongoDatabase _database;
         private MongoCollection<Package> _packages;
+        private MongoCollection<Product> _products;
         private const string UploadFolder = "/Content/img/packages";
 
         public PackagesController()
@@ -28,6 +28,7 @@ namespace Ambro.Controllers
             _server = _client.GetServer();
             _database = _server.GetDatabase(Globals.DatabaseName);
             _packages = _database.GetCollection<Package>("packages");
+            _products = _database.GetCollection<Product>("products");
         }
 
         public IHttpActionResult Get()
@@ -38,7 +39,7 @@ namespace Ambro.Controllers
         [Route("api/packages/getPastries")]
         public IHttpActionResult GetPasties()
         {
-            var packages = _packages.FindAll().ToList();
+            var packages = GetPackages();
             return Ok(packages
                 .Where(x => x.Product.Category != null &&
                             string.Compare(x.Product.Category.CategoryName, "pastry",
@@ -48,7 +49,7 @@ namespace Ambro.Controllers
         [Route("api/packages/getCookies")]
         public IHttpActionResult GetCookies()
         {
-            var packages = _packages.FindAll().ToList();
+            var packages = GetPackages();
             return Ok(packages
                     .Where(x => x.Product.Category != null &&
                             string.Compare(x.Product.Category.CategoryName, "cookie",
@@ -58,7 +59,7 @@ namespace Ambro.Controllers
         [Route("api/packages/getAssortments")]
         public IHttpActionResult GetAssortments()
         {
-            var packages = _packages.FindAll().ToList();
+            var packages = GetPackages();
             return Ok(packages
                     .Where(x => x.Product.Category != null &&
                             string.Compare(x.Product.Category.CategoryName, "assortment",
@@ -67,7 +68,7 @@ namespace Ambro.Controllers
         [Route("api/packages/getSeasonal")]
         public IHttpActionResult GetSeasonal()
         {
-            var packages = _packages.FindAll().ToList();
+            var packages = GetPackages();
             return Ok(packages
                     .Where(x => x.Product.Category != null &&
                             string.Compare(x.Product.Category.CategoryName, "seasonal",
@@ -75,7 +76,9 @@ namespace Ambro.Controllers
         }
         public IHttpActionResult Get(string packageId)
         {
-            return Ok(_packages.FindOneById(new ObjectId(packageId)));
+            var package = _packages.FindOneById(new ObjectId(packageId));
+            package.Product = _products.FindOneById(new ObjectId(package.Product.Id));
+            return Ok(package);
         }
 
         public async Task<IHttpActionResult> Post()
@@ -114,6 +117,17 @@ namespace Ambro.Controllers
             //var uri = Url.Link("~/api/packages", new { packageId = package.Id });
 
             return Ok();
+        }
+
+        private IList<Package> GetPackages()
+        {
+            var products = _products.FindAll().ToList();
+            return
+                _packages.FindAll().Select(x =>
+                {
+                    x.Product = products.FirstOrDefault(p => p.Id == x.Product.Id);
+                    return x;
+                }).ToList();
         }
 
         // You could extract these two private methods to a separate utility class since
