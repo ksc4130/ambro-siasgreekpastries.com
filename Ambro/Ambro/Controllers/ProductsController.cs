@@ -7,48 +7,32 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Web.Http;
 using Ambro.Models;
-using MongoDB.Driver;
+using Mere;
 
 namespace Ambro.Controllers
 {
     public class ProductsController : ApiController
     {
-        private MongoClient _client = new MongoClient(Globals.ConnStr);
-        private MongoServer _server;
-        private MongoDatabase _database;
-        private MongoCollection<Product> _products;
-        private MongoCollection<Package> _packages;
-        private MongoCollection<Category> _categories;
-
-        public ProductsController()
-        {
-            _server = _client.GetServer();
-            _database = _server.GetDatabase(Globals.DatabaseName);
-            _products = _database.GetCollection<Product>("products");
-            _packages = _database.GetCollection<Package>("packages");
-            _categories = _database.GetCollection<Category>("categories");
-        }
-
         [HttpGet]
         [Route("api/products/getCategories")]
         public IHttpActionResult GetCategories()
         {
-            return Ok(_categories.FindAll());
+            return Ok(MereQuery.Create<Category>().ExecuteToList());
         }
 
         [HttpGet]
         [Route("api/products/getProducts")]
         public IHttpActionResult GetProducts()
         {
-            var found = _products.FindAll();
+            var found = MereQuery.Create<Product>().ExecuteToList(); ;
             return Ok(found);
         }
 
         // GET api/<controller>
-        public IHttpActionResult Get()
-        {
-            return Ok(_packages.FindAll().Where(x => string.Compare(x.Product.Category.CategoryName, "pastries", StringComparison.OrdinalIgnoreCase) == 0));
-        }
+//        public IHttpActionResult Get()
+//        {
+//            return Ok(_packages.FindAll().Where(x => string.Compare(x.Product.Category.CategoryName, "pastries", StringComparison.OrdinalIgnoreCase) == 0));
+//        }
 
         // GET api/<controller>/5
         public string Get(int id)
@@ -59,7 +43,7 @@ namespace Ambro.Controllers
         // POST api/<controller>
         public void Post(Product product)
         {
-            _products.Save(product);
+            product.MereSave();
         }
 
         // PUT api/<controller>/5

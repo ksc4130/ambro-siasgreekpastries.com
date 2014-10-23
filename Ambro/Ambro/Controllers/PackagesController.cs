@@ -8,76 +8,52 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using Ambro.Models;
-using MongoDB.Bson;
-using MongoDB.Driver;
+using Mere;
 using Newtonsoft.Json;
 
 namespace Ambro.Controllers
 {
     public class PackagesController : ApiController
     {
-        private MongoClient _client = new MongoClient(Globals.ConnStr);
-        private MongoServer _server;
-        private MongoDatabase _database;
-        private MongoCollection<Package> _packages;
-        private MongoCollection<Product> _products;
         private const string UploadFolder = "/Content/img/packages";
-
-        public PackagesController()
-        {
-            _server = _client.GetServer();
-            _database = _server.GetDatabase(Globals.DatabaseName);
-            _packages = _database.GetCollection<Package>("packages");
-            _products = _database.GetCollection<Product>("products");
-        }
 
         public IHttpActionResult Get()
         {
-            return Ok(_packages.FindAll());
+            return Ok(MereQuery.Create<Package>().ExecuteToList());
         }
 
         [Route("api/packages/getPastries")]
         public IHttpActionResult GetPasties()
         {
-            var packages = GetPackages();
-            return Ok(packages
-                .Where(x => x.Product.Category != null &&
-                            string.Compare(x.Product.Category.CategoryName, "pastry",
-                                StringComparison.OrdinalIgnoreCase) == 0));
+            return Ok(GetPackagesByCategoryName("pastry"));
         }
 
         [Route("api/packages/getCookies")]
         public IHttpActionResult GetCookies()
         {
-            var packages = GetPackages();
-            return Ok(packages
-                    .Where(x => x.Product.Category != null &&
-                            string.Compare(x.Product.Category.CategoryName, "cookie",
-                                StringComparison.OrdinalIgnoreCase) == 0));
+            return Ok(GetPackagesByCategoryName("cookie"));
         }
 
         [Route("api/packages/getAssortments")]
         public IHttpActionResult GetAssortments()
         {
-            var packages = GetPackages();
-            return Ok(packages
-                    .Where(x => x.Product.Category != null &&
-                            string.Compare(x.Product.Category.CategoryName, "assortment",
-                                StringComparison.OrdinalIgnoreCase) == 0));
+            return Ok(GetPackagesByCategoryName("assortment"));
         }
         [Route("api/packages/getSeasonal")]
         public IHttpActionResult GetSeasonal()
         {
-            var packages = GetPackages();
-            return Ok(packages
-                    .Where(x => x.Product.Category != null &&
-                            string.Compare(x.Product.Category.CategoryName, "seasonal",
-                                StringComparison.OrdinalIgnoreCase) == 0));
+            return Ok(GetPackagesByCategoryName("seasonal"));
         }
-        public IHttpActionResult Get(string packageId)
+        public IHttpActionResult Get(int packageId)
         {
-            var package = _packages.FindOneById(new ObjectId(packageId));
-            package.Product = _products.FindOneById(new ObjectId(package.Product.Id));
+            var package = MereQuery.Create<Package>()
+                .Where(x => x.PackageId).EqualTo(packageId)
+                .ExecuteFirstOrDefault();
+
+            package.Product = MereQuery.Create<Product>()
+                .Where(x => x.ProductId).EqualTo(package.ProductId)
+                .ExecuteFirstOrDefault();
+
             return Ok(package);
         }
 
@@ -112,20 +88,38 @@ namespace Ambro.Controllers
 
             uploadedFileInfo.MoveTo(filePath);
 
-            _packages.Save(package);
+            package.MereSave();
 
             //var uri = Url.Link("~/api/packages", new { packageId = package.Id });
 
             return Ok();
         }
 
+        private IList<Package> GetPackagesByCategoryName(string catName)
+        {
+            var cat = MereQuery.Create<Category>()
+                .Where(x => x.CategoryName).StartsWith(catName)
+                .ExecuteFirstOrDefault();
+
+            var products = MereQuery.Create<Product>().ExecuteToList();
+
+            var packages = GetPackages();
+
+            var toReturn = packages
+                .Where(x => x.CategoryId == cat.CategoryId).ToList();
+
+            toReturn.ForEach(x => x.Product = products.FirstOrDefault(p => p.ProductId == x.ProductId));
+
+            return toReturn;
+        }
+
         private IList<Package> GetPackages()
         {
-            var products = _products.FindAll().ToList();
+            var products = MereQuery.Create<Product>().ExecuteToList();
             return
-                _packages.FindAll().Select(x =>
+                MereQuery.Create<Package>().Execute().Select(x =>
                 {
-                    x.Product = products.FirstOrDefault(p => p.Id == x.Product.Id);
+                    x.Product = products.FirstOrDefault(p => p.ProductId == x.ProductId);
                     return x;
                 }).ToList();
         }
