@@ -20,7 +20,7 @@ namespace Ambro
 //            var mds = MereDataSource.Create("54.165.157.218", "ambro", "sa", "Lala!!4130");
             MereUtils.GlobalDataSource = mds;
 
-            AmbroConfig.InitConfig();
+            AmbroConfig.InitConfig(); 
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
